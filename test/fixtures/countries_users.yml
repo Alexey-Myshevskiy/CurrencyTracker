@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: "user1@mail.com"
+  country_code: "RU"
+  created_at: <%=2.days.ago%>
+  updated_at: <%=DateTime.now%>
+  #user: user1
+
+#two:
+#  user_id: "user1@mail.com"
+#  country_code: "UK"
+#    created_at: <%=2.days.ago%>
+#    updated_at: <%=DateTime.now%>
+  #user: user1

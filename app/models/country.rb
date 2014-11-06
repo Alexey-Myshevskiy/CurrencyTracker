@@ -7,7 +7,8 @@ class Country < ActiveRecord::Base
   validates_uniqueness_of :code, :allow_blank => true
 
   has_many :currencies
-
+  has_many :countries_users
+  has_many :users, :through=>:countries_users
   accepts_nested_attributes_for :currencies, :allow_destroy => true
 
   scope :visited, :conditions => { :visited => true }
