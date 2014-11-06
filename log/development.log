@@ -14119,3 +14119,1356 @@ Connecting to database specified by database.yml
   [1m[36m (125.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110422222923')[0m
   [1m[35m (100.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141105121501')
   [1m[36m (100.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110425153204')[0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:01:12 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Compiled application.css  (1ms)  (pid 20637)
+Compiled application.js  (2ms)  (pid 20637)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 160.3ms (Views: 157.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /application.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:01:13 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Completed 200 OK in 148.6ms (Views: 146.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /scaffold.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:00 +0200
+Served asset /view_controller.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-06 16:06:13 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"SPQFd7QCbtsOCjt5k56I1QKlcKaJc8aCt6WV8lmFOl4="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 84.2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:06:13 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 11.9ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:06:14 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (1.4ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 21.7ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /application.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:36 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlQYoqcwR548T6MLXUjthUv3eD4lzCWiVn4O/mROGoo=", "user"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' LIMIT 1[0m
+Completed 401 Unauthorized in 5.0ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlQYoqcwR548T6MLXUjthUv3eD4lzCWiVn4O/mROGoo=", "user"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 75.8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:41 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.5ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/registrations/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 9.5ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:08:53 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-11-06 16:09:17 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KlQYoqcwR548T6MLXUjthUv3eD4lzCWiVn4O/mROGoo=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "last_sign_in_at", "last_sign_in_ip", "remember_created_at", "reset_password_sent_at", "reset_password_token", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Thu, 06 Nov 2014 14:09:18 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "user2@example.com"], ["encrypted_password", "$2a$10$EgIM49Rm/T6FnITbIjUBN.NsOOET59hkMA6ivDJlYhXZCsECMvxXi"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["sign_in_count", 0], ["updated_at", Thu, 06 Nov 2014 14:09:18 UTC +00:00]]
+  [1m[36m (169.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2014-11-06 14:09:18.215388', "current_sign_in_at" = '2014-11-06 14:09:18.215388', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2014-11-06 14:09:18.216548' WHERE "users"."id" = 2[0m
+  [1m[35m (136.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 471.8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Processing by UsersController#index as HTML
+  Rendered users/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 30.7ms (Views: 30.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:09:18 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Processing by UsersController#index as HTML
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 173.9ms (Views: 89.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:12:26 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:44 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:44 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:12:44 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Processing by UsersController#index as HTML
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered users/index.html.erb within layouts/application (105.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 278.5ms (Views: 195.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:15:06 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateCountriesUsers (20141106075328)
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "countries_users"[0m
+  [1m[35m (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20141106075328'
+  [1m[36m (131.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCurrencies (20110422200728)
+Migrating to CreateCountries (20110422200744)
+Migrating to AddCountryIdToCurrency (20110422222923)
+Migrating to AddVistedToCountries (20110425153204)
+Migrating to DeviseCreateUsers (20141105121501)
+Migrating to CreateCountriesUsers (20141106075328)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "countries_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar(255) NOT NULL, "country_code" varchar(255) NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20141106075328')[0m
+  [1m[35m (134.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateCurrencies (20110422200728)
+Migrating to CreateCountries (20110422200744)
+Migrating to AddCountryIdToCurrency (20110422222923)
+Migrating to AddVistedToCountries (20110425153204)
+Migrating to DeviseCreateUsers (20141105121501)
+Migrating to CreateCountriesUsers (20141106075328)
+Migrating to RemoveVisitedFromCountries (20141106144324)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TEMPORARY TABLE "altered_countries" ("name" varchar(255), "code" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "visited" boolean DEFAULT 'f') 
+  [1m[36m (0.8ms)[0m  [1mSELECT * FROM "countries"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Afghanistan, Islamic State of', 'af', '2014-11-05 09:38:20.605396', '2014-11-05 09:40:56.933957', 't')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Albania', 'al', '2014-11-05 09:38:20.792305', '2014-11-05 09:38:20.792305', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Algeria', 'dz', '2014-11-05 09:38:20.957717', '2014-11-05 09:38:20.957717', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('American Samoa', 'as', '2014-11-05 09:38:21.074674', '2014-11-05 09:38:21.074674', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Andorra, Principality of', 'ad', '2014-11-05 09:38:21.191830', '2014-11-05 10:22:53.631389', 't')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Angola', 'ao', '2014-11-05 09:38:21.318209', '2014-11-05 09:38:21.318209', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Anguilla', 'ai', '2014-11-05 09:38:21.427084', '2014-11-05 09:38:21.427084', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Antarctica', 'aq', '2014-11-05 09:38:21.535799', '2014-11-05 09:38:21.535799', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Antigua and Barbuda', 'ag', '2014-11-05 09:38:21.636138', '2014-11-05 09:38:21.636138', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Argentina', 'ar', '2014-11-05 09:38:21.736525', '2014-11-05 09:38:21.736525', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Armenia', 'am', '2014-11-05 09:38:21.845254', '2014-11-05 09:38:21.845254', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Aruba', 'aw', '2014-11-05 09:38:21.945674', '2014-11-05 09:38:21.945674', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Australia', 'au', '2014-11-05 09:38:22.076262', '2014-11-05 09:38:22.076262', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Austria', 'at', '2014-11-05 09:38:22.213112', '2014-11-05 09:38:22.213112', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Azerbaidjan', 'az', '2014-11-05 09:38:22.388652', '2014-11-05 09:38:22.388652', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bahamas', 'bs', '2014-11-05 09:38:22.505662', '2014-11-05 09:38:22.505662', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bahrain', 'bh', '2014-11-05 09:38:22.622726', '2014-11-05 09:38:22.622726', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bangladesh', 'bd', '2014-11-05 09:38:22.789769', '2014-11-05 09:38:22.789769', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Barbados', 'bb', '2014-11-05 09:38:22.906832', '2014-11-05 09:38:22.906832', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Belarus', 'by', '2014-11-05 09:38:23.090665', '2014-11-05 09:38:23.090665', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Belgium', 'be', '2014-11-05 09:38:23.291094', '2014-11-05 09:38:23.291094', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Belize', 'bz', '2014-11-05 09:38:23.458204', '2014-11-05 09:38:23.458204', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Benin', 'bj', '2014-11-05 09:38:23.616944', '2014-11-05 09:38:23.616944', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bermuda', 'bm', '2014-11-05 09:38:23.734355', '2014-11-05 09:38:23.734355', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bhutan', 'bt', '2014-11-05 09:38:23.859467', '2014-11-05 09:38:23.859467', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bolivia', 'bo', '2014-11-05 09:38:24.027492', '2014-11-05 09:38:24.027492', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bosnia-Herzegovina', 'ba', '2014-11-05 09:38:24.202790', '2014-11-05 09:38:24.202790', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Botswana', 'bw', '2014-11-05 09:38:24.378387', '2014-11-05 09:38:24.378387', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bouvet Island', 'bv', '2014-11-05 09:38:24.545432', '2014-11-05 09:38:24.545432', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Brazil', 'br', '2014-11-05 09:38:24.662534', '2014-11-05 09:38:24.662534', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('British Indian Ocean Territory', 'io', '2014-11-05 09:38:24.829595', '2014-11-05 09:38:24.829595', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Brunei Darussalam', 'bn', '2014-11-05 09:38:25.004750', '2014-11-05 09:38:25.004750', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Bulgaria', 'bg', '2014-11-05 09:38:25.180232', '2014-11-05 09:38:25.180232', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Burkina Faso', 'bf', '2014-11-05 09:38:25.347328', '2014-11-05 09:38:25.347328', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Burundi', 'bi', '2014-11-05 09:38:25.514518', '2014-11-05 09:38:25.514518', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cambodia, Kingdom of', 'kh', '2014-11-05 09:38:25.681474', '2014-11-05 09:38:25.681474', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cameroon', 'cm', '2014-11-05 09:38:25.798476', '2014-11-05 09:38:25.798476', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Canada', 'ca', '2014-11-05 09:38:25.965824', '2014-11-05 09:38:25.965824', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cape Verde', 'cv', '2014-11-05 09:38:26.132804', '2014-11-05 09:38:26.132804', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cayman Islands', 'ky', '2014-11-05 09:38:26.308144', '2014-11-05 09:38:26.308144', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Central African Republic', 'cf', '2014-11-05 09:38:26.492015', '2014-11-05 09:38:26.492015', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Chad', 'td', '2014-11-05 09:38:26.675646', '2014-11-05 09:38:26.675646', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Chile', 'cl', '2014-11-05 09:38:26.859378', '2014-11-05 09:38:26.859378', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('China', 'cn', '2014-11-05 09:38:27.043088', '2014-11-05 09:38:27.043088', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Christmas Island', 'cx', '2014-11-05 09:38:27.543452', '2014-11-05 09:38:27.543452', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cocos (Keeling) Islands', 'cc', '2014-11-05 09:38:27.653258', '2014-11-05 09:38:27.653258', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Colombia', 'co', '2014-11-05 09:38:27.811981', '2014-11-05 09:38:27.811981', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Comoros', 'km', '2014-11-05 09:38:27.920680', '2014-11-05 09:38:27.920680', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Congo', 'cg', '2014-11-05 09:38:28.087791', '2014-11-05 09:38:28.087791', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Congo, The Democratic Republic of the', 'cd', '2014-11-05 09:38:28.205233', '2014-11-05 09:38:28.205233', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cook Islands', 'ck', '2014-11-05 09:38:28.321927', '2014-11-05 09:38:28.321927', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Costa Rica', 'cr', '2014-11-05 09:38:28.439020', '2014-11-05 09:38:28.439020', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Croatia', 'hr', '2014-11-05 09:38:28.564549', '2014-11-05 09:38:28.564549', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cuba', 'cu', '2014-11-05 09:38:28.681551', '2014-11-05 09:38:28.681551', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Cyprus', 'cy', '2014-11-05 09:38:28.806980', '2014-11-05 09:38:28.806980', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Czech Republic', 'cz', '2014-11-05 09:38:28.932446', '2014-11-05 09:38:28.932446', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Denmark', 'dk', '2014-11-05 09:38:29.107679', '2014-11-05 09:38:29.107679', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Djibouti', 'dj', '2014-11-05 09:38:29.233115', '2014-11-05 09:38:29.233115', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Dominica', 'dm', '2014-11-05 09:38:29.366804', '2014-11-05 09:38:29.366804', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Dominican Republic', 'do', '2014-11-05 09:38:29.492260', '2014-11-05 09:38:29.492260', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('East Timor', 'tp', '2014-11-05 09:38:29.625914', '2014-11-05 09:38:29.625914', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ecuador', 'ec', '2014-11-05 09:38:29.759748', '2014-11-05 09:38:29.759748', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Egypt', 'eg', '2014-11-05 09:38:29.885115', '2014-11-05 09:38:29.885115', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('El Salvador', 'sv', '2014-11-05 09:38:30.002411', '2014-11-05 09:38:30.002411', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Equatorial Guinea', 'gq', '2014-11-05 09:38:30.111077', '2014-11-05 09:38:30.111077', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Eritrea', 'er', '2014-11-05 09:38:30.237488', '2014-11-05 09:38:30.237488', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Estonia', 'ee', '2014-11-05 09:38:30.442469', '2014-11-05 09:38:30.442469', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ethiopia', 'et', '2014-11-05 09:38:30.555251', '2014-11-05 09:38:30.555251', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Falkland Islands', 'fk', '2014-11-05 09:38:30.672260', '2014-11-05 09:38:30.672260', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Faroe Islands', 'fo', '2014-11-05 09:38:30.789135', '2014-11-05 09:38:30.789135', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Fiji', 'fj', '2014-11-05 09:38:30.956254', '2014-11-05 09:38:30.956254', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Finland', 'fi', '2014-11-05 09:38:31.139984', '2014-11-05 09:38:31.139984', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Former Czechoslovakia', 'cs', '2014-11-05 09:38:31.323825', '2014-11-05 09:38:31.323825', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Former USSR', 'su', '2014-11-05 09:38:31.516080', '2014-11-05 09:38:31.516080', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('France', 'fr', '2014-11-05 09:38:31.641602', '2014-11-05 09:38:31.641602', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('France (European Territory)', 'fx', '2014-11-05 09:38:31.774886', '2014-11-05 09:38:31.774886', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('French Guyana', 'gf', '2014-11-05 09:38:31.950670', '2014-11-05 09:38:31.950670', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('French Southern Territories', 'tf', '2014-11-05 09:38:32.167444', '2014-11-05 09:38:32.167444', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Gabon', 'ga', '2014-11-05 09:38:32.334679', '2014-11-05 09:38:32.334679', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Gambia', 'gm', '2014-11-05 09:38:32.451566', '2014-11-05 09:38:32.451566', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Georgia', 'ge', '2014-11-05 09:38:32.560305', '2014-11-05 09:38:32.560305', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Germany', 'de', '2014-11-05 09:38:32.783066', '2014-11-05 09:38:32.783066', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ghana', 'gh', '2014-11-05 09:38:32.903050', '2014-11-05 09:38:32.903050', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Gibraltar', 'gi', '2014-11-05 09:38:33.061720', '2014-11-05 09:38:33.061720', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Great Britain', 'gb', '2014-11-05 09:38:33.187765', '2014-11-05 09:38:33.187765', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Greece', 'gr', '2014-11-05 09:38:33.305317', '2014-11-05 09:38:33.305317', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Greenland', 'gl', '2014-11-05 09:38:33.422334', '2014-11-05 09:38:33.422334', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Grenada', 'gd', '2014-11-05 09:38:33.539394', '2014-11-05 09:38:33.539394', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guadeloupe (French)', 'gp', '2014-11-05 09:38:33.664807', '2014-11-05 09:38:33.664807', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guam (USA)', 'gu', '2014-11-05 09:38:33.856842', '2014-11-05 09:38:33.856842', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guatemala', 'gt', '2014-11-05 09:38:33.990512', '2014-11-05 09:38:33.990512', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guinea', 'gn', '2014-11-05 09:38:34.116027', '2014-11-05 09:38:34.116027', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guinea Bissau', 'gw', '2014-11-05 09:38:34.291436', '2014-11-05 09:38:34.291436', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Guyana', 'gy', '2014-11-05 09:38:34.466933', '2014-11-05 09:38:34.466933', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Haiti', 'ht', '2014-11-05 09:38:34.600631', '2014-11-05 09:38:34.600631', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Heard and McDonald Islands', 'hm', '2014-11-05 09:38:34.767752', '2014-11-05 09:38:34.767752', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Holy See (Vatican City State)', 'va', '2014-11-05 09:38:34.926468', '2014-11-05 09:38:34.926468', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Honduras', 'hn', '2014-11-05 09:38:35.118514', '2014-11-05 09:38:35.118514', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Hong Kong', 'hk', '2014-11-05 09:38:35.302321', '2014-11-05 09:38:35.302321', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Hungary', 'hu', '2014-11-05 09:38:35.486576', '2014-11-05 09:38:35.486576', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Iceland', 'is', '2014-11-05 09:38:35.603115', '2014-11-05 09:38:35.603115', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('India', 'in', '2014-11-05 09:38:35.770113', '2014-11-05 09:38:35.770113', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Indonesia', 'id', '2014-11-05 09:38:35.937231', '2014-11-05 09:38:35.937231', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Iran', 'ir', '2014-11-05 09:38:36.121020', '2014-11-05 09:38:36.121020', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Iraq', 'iq', '2014-11-05 09:38:36.297429', '2014-11-05 09:38:36.297429', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ireland', 'ie', '2014-11-05 09:38:36.473125', '2014-11-05 09:38:36.473125', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Israel', 'il', '2014-11-05 09:38:36.648212', '2014-11-05 09:38:36.648212', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Italy', 'it', '2014-11-05 09:38:36.773534', '2014-11-05 09:38:36.773534', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ivory Coast (Cote D''Ivoire)', 'ci', '2014-11-05 09:38:36.948954', '2014-11-05 09:38:36.948954', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Jamaica', 'jm', '2014-11-05 09:38:37.157660', '2014-11-05 09:38:37.157660', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Japan', 'jp', '2014-11-05 09:38:37.349838', '2014-11-05 09:38:37.349838', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Jordan', 'jo', '2014-11-05 09:38:37.483520', '2014-11-05 09:38:37.483520', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Kazakhstan', 'kz', '2014-11-05 09:38:37.600554', '2014-11-05 09:38:37.600554', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Kenya', 'ke', '2014-11-05 09:38:37.717673', '2014-11-05 09:38:37.717673', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Kiribati', 'ki', '2014-11-05 09:38:37.884713', '2014-11-05 09:38:37.884713', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Kuwait', 'kw', '2014-11-05 09:38:37.993466', '2014-11-05 09:38:37.993466', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Kyrgyz Republic (Kyrgyzstan)', 'kg', '2014-11-05 09:38:38.127234', '2014-11-05 09:38:38.127234', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Laos', 'la', '2014-11-05 09:38:38.244299', '2014-11-05 09:38:38.244299', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Latvia', 'lv', '2014-11-05 09:38:38.369699', '2014-11-05 09:38:38.369699', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Lebanon', 'lb', '2014-11-05 09:38:38.536875', '2014-11-05 09:38:38.536875', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Lesotho', 'ls', '2014-11-05 09:38:38.720625', '2014-11-05 09:38:38.720625', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Liberia', 'lr', '2014-11-05 09:38:38.845978', '2014-11-05 09:38:38.845978', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Libya', 'ly', '2014-11-05 09:38:39.021367', '2014-11-05 09:38:39.021367', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Liechtenstein', 'li', '2014-11-05 09:38:39.146870', '2014-11-05 09:38:39.146870', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Lithuania', 'lt', '2014-11-05 09:38:39.273091', '2014-11-05 09:38:39.273091', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Luxembourg', 'lu', '2014-11-05 09:38:39.465216', '2014-11-05 09:38:39.465216', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Macau', 'mo', '2014-11-05 09:38:39.590644', '2014-11-05 09:38:39.590644', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Macedonia', 'mk', '2014-11-05 09:38:39.774354', '2014-11-05 09:38:39.774354', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Madagascar', 'mg', '2014-11-05 09:38:39.958529', '2014-11-05 09:38:39.958529', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Malawi', 'mw', '2014-11-05 09:38:40.150273', '2014-11-05 09:38:40.150273', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Malaysia', 'my', '2014-11-05 09:38:40.275678', '2014-11-05 09:38:40.275678', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Maldives', 'mv', '2014-11-05 09:38:40.409294', '2014-11-05 09:38:40.409294', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mali', 'ml', '2014-11-05 09:38:40.543076', '2014-11-05 09:38:40.543076', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Malta', 'mt', '2014-11-05 09:38:40.651892', '2014-11-05 09:38:40.651892', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Marshall Islands', 'mh', '2014-11-05 09:38:40.844021', '2014-11-05 09:38:40.844021', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Martinique (French)', 'mq', '2014-11-05 09:38:41.035987', '2014-11-05 09:38:41.035987', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mauritania', 'mr', '2014-11-05 09:38:41.144760', '2014-11-05 09:38:41.144760', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mauritius', 'mu', '2014-11-05 09:38:41.311381', '2014-11-05 09:38:41.311381', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mayotte', 'yt', '2014-11-05 09:38:41.494262', '2014-11-05 09:38:41.494262', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mexico', 'mx', '2014-11-05 09:38:41.679326', '2014-11-05 09:38:41.679326', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Micronesia', 'fm', '2014-11-05 09:38:41.804631', '2014-11-05 09:38:41.804631', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Moldavia', 'md', '2014-11-05 09:38:41.930165', '2014-11-05 09:38:41.930165', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Monaco', 'mc', '2014-11-05 09:38:42.055485', '2014-11-05 09:38:42.055485', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mongolia', 'mn', '2014-11-05 09:38:42.314196', '2014-11-05 09:38:42.314196', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Montserrat', 'ms', '2014-11-05 09:38:42.449062', '2014-11-05 09:38:42.449062', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Morocco', 'ma', '2014-11-05 09:38:42.582939', '2014-11-05 09:38:42.582939', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Mozambique', 'mz', '2014-11-05 09:38:42.708257', '2014-11-05 09:38:42.708257', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Myanmar', 'mm', '2014-11-05 09:38:42.841943', '2014-11-05 09:38:42.841943', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Namibia', 'na', '2014-11-05 09:38:43.009188', '2014-11-05 09:38:43.009188', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Nauru', 'nr', '2014-11-05 09:38:43.126239', '2014-11-05 09:38:43.126239', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Nepal', 'np', '2014-11-05 09:38:43.259954', '2014-11-05 09:38:43.259954', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Netherlands', 'nl', '2014-11-05 09:38:43.368640', '2014-11-05 09:38:43.368640', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Netherlands Antilles', 'an', '2014-11-05 09:38:43.552416', '2014-11-05 09:38:43.552416', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Neutral Zone', 'nt', '2014-11-05 09:38:43.677819', '2014-11-05 09:38:43.677819', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('New Caledonia (French)', 'nc', '2014-11-05 09:38:43.794754', '2014-11-05 09:38:43.794754', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('New Zealand', 'nz', '2014-11-05 09:38:43.912623', '2014-11-05 09:38:43.912623', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Nicaragua', 'ni', '2014-11-05 09:38:44.029138', '2014-11-05 09:38:44.029138', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Niger', 'ne', '2014-11-05 09:38:44.221241', '2014-11-05 09:38:44.221241', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Nigeria', 'ng', '2014-11-05 09:38:44.338290', '2014-11-05 09:38:44.338290', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Niue', 'nu', '2014-11-05 09:38:44.455381', '2014-11-05 09:38:44.455381', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Norfolk Island', 'nf', '2014-11-05 09:38:44.572449', '2014-11-05 09:38:44.572449', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('North Korea', 'kp', '2014-11-05 09:38:44.689557', '2014-11-05 09:38:44.689557', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Northern Mariana Islands', 'mp', '2014-11-05 09:38:44.815051', '2014-11-05 09:38:44.815051', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Norway', 'no', '2014-11-05 09:38:44.949700', '2014-11-05 09:38:44.949700', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Oman', 'om', '2014-11-05 09:38:45.125216', '2014-11-05 09:38:45.125216', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Pakistan', 'pk', '2014-11-05 09:38:45.275791', '2014-11-05 09:38:45.275791', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Palau', 'pw', '2014-11-05 09:38:45.410859', '2014-11-05 09:38:45.410859', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Panama', 'pa', '2014-11-05 09:38:45.535917', '2014-11-05 09:38:45.535917', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Papua New Guinea', 'pg', '2014-11-05 09:38:45.653005', '2014-11-05 09:38:45.653005', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Paraguay', 'py', '2014-11-05 09:38:45.803631', '2014-11-05 09:38:45.803631', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Peru', 'pe', '2014-11-05 09:38:45.927819', '2014-11-05 09:38:45.927819', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Philippines', 'ph', '2014-11-05 09:38:46.044747', '2014-11-05 09:38:46.044747', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Pitcairn Island', 'pn', '2014-11-05 09:38:46.161688', '2014-11-05 09:38:46.161688', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Poland', 'pl', '2014-11-05 09:38:46.337071', '2014-11-05 09:38:46.337071', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Polynesia (French)', 'pf', '2014-11-05 09:38:46.454187', '2014-11-05 09:38:46.454187', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Portugal', 'pt', '2014-11-05 09:38:46.571296', '2014-11-05 09:38:46.571296', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Puerto Rico', 'pr', '2014-11-05 09:38:46.688390', '2014-11-05 09:38:46.688390', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Qatar', 'qa', '2014-11-05 09:38:46.805399', '2014-11-05 09:38:46.805399', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Reunion (French)', 're', '2014-11-05 09:38:46.964344', '2014-11-05 09:38:46.964344', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Romania', 'ro', '2014-11-05 09:38:47.081696', '2014-11-05 09:38:47.081696', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Russian Federation', 'ru', '2014-11-05 09:38:47.356604', '2014-11-05 09:38:47.356604', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Rwanda', 'rw', '2014-11-05 09:38:47.490457', '2014-11-05 09:38:47.490457', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('S. Georgia & S. Sandwich Isls.', 'gs', '2014-11-05 09:38:47.700520', '2014-11-05 09:38:47.700520', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Helena', 'sh', '2014-11-05 09:38:47.892596', '2014-11-05 09:38:47.892596', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Kitts & Nevis Anguilla', 'kn', '2014-11-05 09:38:48.084693', '2014-11-05 09:38:48.084693', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Lucia', 'lc', '2014-11-05 09:38:48.218430', '2014-11-05 09:38:48.218430', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Pierre and Miquelon', 'pm', '2014-11-05 09:38:48.352110', '2014-11-05 09:38:48.352110', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Tome (Sao Tome) and Principe', 'st', '2014-11-05 09:38:48.485858', '2014-11-05 09:38:48.485858', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saint Vincent & Grenadines', 'vc', '2014-11-05 09:38:48.602963', '2014-11-05 09:38:48.602963', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Samoa', 'ws', '2014-11-05 09:38:48.720034', '2014-11-05 09:38:48.720034', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('San Marino', 'sm', '2014-11-05 09:38:48.837077', '2014-11-05 09:38:48.837077', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Saudi Arabia', 'sa', '2014-11-05 09:38:48.995735', '2014-11-05 09:38:48.995735', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Senegal', 'sn', '2014-11-05 09:38:49.162923', '2014-11-05 09:38:49.162923', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Seychelles', 'sc', '2014-11-05 09:38:49.279920', '2014-11-05 09:38:49.279920', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Sierra Leone', 'sl', '2014-11-05 09:38:49.447102', '2014-11-05 09:38:49.447102', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Singapore', 'sg', '2014-11-05 09:38:49.614163', '2014-11-05 09:38:49.614163', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Slovak Republic', 'sk', '2014-11-05 09:38:49.806218', '2014-11-05 09:38:49.806218', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Slovenia', 'si', '2014-11-05 09:38:49.931724', '2014-11-05 09:38:49.931724', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Solomon Islands', 'sb', '2014-11-05 09:38:50.098688', '2014-11-05 09:38:50.098688', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Somalia', 'so', '2014-11-05 09:38:50.273987', '2014-11-05 09:38:50.273987', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('South Africa', 'za', '2014-11-05 09:38:50.457858', '2014-11-05 09:38:50.457858', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('South Korea', 'kr', '2014-11-05 09:38:50.641497', '2014-11-05 09:38:50.641497', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Spain', 'es', '2014-11-05 09:38:50.816959', '2014-11-05 09:38:50.816959', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Sri Lanka', 'lk', '2014-11-05 09:38:50.976781', '2014-11-05 09:38:50.976781', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Sudan', 'sd', '2014-11-05 09:38:51.085372', '2014-11-05 09:38:51.085372', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Suriname', 'sr', '2014-11-05 09:38:51.285640', '2014-11-05 09:38:51.285640', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Svalbard and Jan Mayen Islands', 'sj', '2014-11-05 09:38:51.494535', '2014-11-05 09:38:51.494535', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Swaziland', 'sz', '2014-11-05 09:38:51.603247', '2014-11-05 09:38:51.603247', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Sweden', 'se', '2014-11-05 09:38:51.795359', '2014-11-05 09:38:51.795359', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Switzerland', 'ch', '2014-11-05 09:38:51.979214', '2014-11-05 09:38:51.979214', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Syria', 'sy', '2014-11-05 09:38:52.096452', '2014-11-05 09:38:52.096452', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tadjikistan', 'tj', '2014-11-05 09:38:52.421654', '2014-11-05 09:38:52.421654', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Taiwan', 'tw', '2014-11-05 09:38:52.588662', '2014-11-05 09:38:52.588662', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tanzania', 'tz', '2014-11-05 09:38:52.897886', '2014-11-05 09:38:52.897886', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Thailand', 'th', '2014-11-05 09:38:53.023380', '2014-11-05 09:38:53.023380', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Togo', 'tg', '2014-11-05 09:38:53.198738', '2014-11-05 09:38:53.198738', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tokelau', 'tk', '2014-11-05 09:38:53.399082', '2014-11-05 09:38:53.399082', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tonga', 'to', '2014-11-05 09:38:53.524551', '2014-11-05 09:38:53.524551', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Trinidad and Tobago', 'tt', '2014-11-05 09:38:53.649847', '2014-11-05 09:38:53.649847', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tunisia', 'tn', '2014-11-05 09:38:53.767096', '2014-11-05 09:38:53.767096', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Turkey', 'tr', '2014-11-05 09:38:53.892478', '2014-11-05 09:38:53.892478', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Turkmenistan', 'tm', '2014-11-05 09:38:54.060573', '2014-11-05 09:38:54.060573', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Turks and Caicos Islands', 'tc', '2014-11-05 09:38:54.235939', '2014-11-05 09:38:54.235939', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Tuvalu', 'tv', '2014-11-05 09:38:54.344596', '2014-11-05 09:38:54.344596', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Uganda', 'ug', '2014-11-05 09:38:54.536647', '2014-11-05 09:38:54.536647', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Ukraine', 'ua', '2014-11-05 09:38:54.712105', '2014-11-05 09:38:54.712105', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('United Arab Emirates', 'ae', '2014-11-05 09:38:54.879245', '2014-11-05 09:38:54.879245', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('United Kingdom', 'uk', '2014-11-05 09:38:55.046255', '2014-11-05 09:38:55.046255', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('United States', 'us', '2014-11-05 09:38:55.163247', '2014-11-05 09:38:55.163247', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Uruguay', 'uy', '2014-11-05 09:38:55.297107', '2014-11-05 09:38:55.297107', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('USA Minor Outlying Islands', 'um', '2014-11-05 09:38:55.414276', '2014-11-05 09:38:55.414276', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Uzbekistan', 'uz', '2014-11-05 09:38:55.539698', '2014-11-05 09:38:55.539698', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Vanuatu', 'vu', '2014-11-05 09:38:55.665028', '2014-11-05 09:38:55.665028', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Venezuela', 've', '2014-11-05 09:38:55.790521', '2014-11-05 09:38:55.790521', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Vietnam', 'vn', '2014-11-05 09:38:55.924198', '2014-11-05 09:38:55.924198', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Virgin Islands (British)', 'vg', '2014-11-05 09:38:56.057843', '2014-11-05 09:38:56.057843', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Virgin Islands (USA)', 'vi', '2014-11-05 09:38:56.249992', '2014-11-05 09:38:56.249992', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Wallis and Futuna Islands', 'wf', '2014-11-05 09:38:56.383902', '2014-11-05 09:38:56.383902', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Western Sahara', 'eh', '2014-11-05 09:38:56.559082', '2014-11-05 09:38:56.559082', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Yemen', 'ye', '2014-11-05 09:38:56.734718', '2014-11-05 09:38:56.734718', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Yugoslavia', 'yu', '2014-11-05 09:38:56.843241', '2014-11-05 09:38:56.843241', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Zaire', 'zr', '2014-11-05 09:38:57.036326', '2014-11-05 09:38:57.036326', 'f')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Zambia', 'zm', '2014-11-05 09:38:57.228427', '2014-11-05 09:38:57.228427', 'f')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "altered_countries" ("name","code","created_at","updated_at","visited") VALUES ('Zimbabwe', 'zw', '2014-11-05 09:38:57.403814', '2014-11-05 09:38:57.403814', 'f')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "countries"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "countries" ("name" varchar(255), "code" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.7ms)[0m  SELECT * FROM "altered_countries"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Afghanistan, Islamic State of', 'af', '2014-11-05 09:38:20.605396', '2014-11-05 09:40:56.933957')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Albania', 'al', '2014-11-05 09:38:20.792305', '2014-11-05 09:38:20.792305')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Algeria', 'dz', '2014-11-05 09:38:20.957717', '2014-11-05 09:38:20.957717')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('American Samoa', 'as', '2014-11-05 09:38:21.074674', '2014-11-05 09:38:21.074674')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Andorra, Principality of', 'ad', '2014-11-05 09:38:21.191830', '2014-11-05 10:22:53.631389')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Angola', 'ao', '2014-11-05 09:38:21.318209', '2014-11-05 09:38:21.318209')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Anguilla', 'ai', '2014-11-05 09:38:21.427084', '2014-11-05 09:38:21.427084')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Antarctica', 'aq', '2014-11-05 09:38:21.535799', '2014-11-05 09:38:21.535799')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Antigua and Barbuda', 'ag', '2014-11-05 09:38:21.636138', '2014-11-05 09:38:21.636138')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Argentina', 'ar', '2014-11-05 09:38:21.736525', '2014-11-05 09:38:21.736525')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Armenia', 'am', '2014-11-05 09:38:21.845254', '2014-11-05 09:38:21.845254')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Aruba', 'aw', '2014-11-05 09:38:21.945674', '2014-11-05 09:38:21.945674')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Australia', 'au', '2014-11-05 09:38:22.076262', '2014-11-05 09:38:22.076262')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Austria', 'at', '2014-11-05 09:38:22.213112', '2014-11-05 09:38:22.213112')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Azerbaidjan', 'az', '2014-11-05 09:38:22.388652', '2014-11-05 09:38:22.388652')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bahamas', 'bs', '2014-11-05 09:38:22.505662', '2014-11-05 09:38:22.505662')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bahrain', 'bh', '2014-11-05 09:38:22.622726', '2014-11-05 09:38:22.622726')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bangladesh', 'bd', '2014-11-05 09:38:22.789769', '2014-11-05 09:38:22.789769')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Barbados', 'bb', '2014-11-05 09:38:22.906832', '2014-11-05 09:38:22.906832')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Belarus', 'by', '2014-11-05 09:38:23.090665', '2014-11-05 09:38:23.090665')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Belgium', 'be', '2014-11-05 09:38:23.291094', '2014-11-05 09:38:23.291094')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Belize', 'bz', '2014-11-05 09:38:23.458204', '2014-11-05 09:38:23.458204')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Benin', 'bj', '2014-11-05 09:38:23.616944', '2014-11-05 09:38:23.616944')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bermuda', 'bm', '2014-11-05 09:38:23.734355', '2014-11-05 09:38:23.734355')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bhutan', 'bt', '2014-11-05 09:38:23.859467', '2014-11-05 09:38:23.859467')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bolivia', 'bo', '2014-11-05 09:38:24.027492', '2014-11-05 09:38:24.027492')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bosnia-Herzegovina', 'ba', '2014-11-05 09:38:24.202790', '2014-11-05 09:38:24.202790')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Botswana', 'bw', '2014-11-05 09:38:24.378387', '2014-11-05 09:38:24.378387')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bouvet Island', 'bv', '2014-11-05 09:38:24.545432', '2014-11-05 09:38:24.545432')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Brazil', 'br', '2014-11-05 09:38:24.662534', '2014-11-05 09:38:24.662534')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('British Indian Ocean Territory', 'io', '2014-11-05 09:38:24.829595', '2014-11-05 09:38:24.829595')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Brunei Darussalam', 'bn', '2014-11-05 09:38:25.004750', '2014-11-05 09:38:25.004750')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Bulgaria', 'bg', '2014-11-05 09:38:25.180232', '2014-11-05 09:38:25.180232')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Burkina Faso', 'bf', '2014-11-05 09:38:25.347328', '2014-11-05 09:38:25.347328')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Burundi', 'bi', '2014-11-05 09:38:25.514518', '2014-11-05 09:38:25.514518')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cambodia, Kingdom of', 'kh', '2014-11-05 09:38:25.681474', '2014-11-05 09:38:25.681474')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cameroon', 'cm', '2014-11-05 09:38:25.798476', '2014-11-05 09:38:25.798476')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Canada', 'ca', '2014-11-05 09:38:25.965824', '2014-11-05 09:38:25.965824')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cape Verde', 'cv', '2014-11-05 09:38:26.132804', '2014-11-05 09:38:26.132804')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cayman Islands', 'ky', '2014-11-05 09:38:26.308144', '2014-11-05 09:38:26.308144')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Central African Republic', 'cf', '2014-11-05 09:38:26.492015', '2014-11-05 09:38:26.492015')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Chad', 'td', '2014-11-05 09:38:26.675646', '2014-11-05 09:38:26.675646')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Chile', 'cl', '2014-11-05 09:38:26.859378', '2014-11-05 09:38:26.859378')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('China', 'cn', '2014-11-05 09:38:27.043088', '2014-11-05 09:38:27.043088')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Christmas Island', 'cx', '2014-11-05 09:38:27.543452', '2014-11-05 09:38:27.543452')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cocos (Keeling) Islands', 'cc', '2014-11-05 09:38:27.653258', '2014-11-05 09:38:27.653258')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Colombia', 'co', '2014-11-05 09:38:27.811981', '2014-11-05 09:38:27.811981')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Comoros', 'km', '2014-11-05 09:38:27.920680', '2014-11-05 09:38:27.920680')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Congo', 'cg', '2014-11-05 09:38:28.087791', '2014-11-05 09:38:28.087791')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Congo, The Democratic Republic of the', 'cd', '2014-11-05 09:38:28.205233', '2014-11-05 09:38:28.205233')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cook Islands', 'ck', '2014-11-05 09:38:28.321927', '2014-11-05 09:38:28.321927')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Costa Rica', 'cr', '2014-11-05 09:38:28.439020', '2014-11-05 09:38:28.439020')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Croatia', 'hr', '2014-11-05 09:38:28.564549', '2014-11-05 09:38:28.564549')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cuba', 'cu', '2014-11-05 09:38:28.681551', '2014-11-05 09:38:28.681551')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Cyprus', 'cy', '2014-11-05 09:38:28.806980', '2014-11-05 09:38:28.806980')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Czech Republic', 'cz', '2014-11-05 09:38:28.932446', '2014-11-05 09:38:28.932446')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Denmark', 'dk', '2014-11-05 09:38:29.107679', '2014-11-05 09:38:29.107679')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Djibouti', 'dj', '2014-11-05 09:38:29.233115', '2014-11-05 09:38:29.233115')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Dominica', 'dm', '2014-11-05 09:38:29.366804', '2014-11-05 09:38:29.366804')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Dominican Republic', 'do', '2014-11-05 09:38:29.492260', '2014-11-05 09:38:29.492260')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('East Timor', 'tp', '2014-11-05 09:38:29.625914', '2014-11-05 09:38:29.625914')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ecuador', 'ec', '2014-11-05 09:38:29.759748', '2014-11-05 09:38:29.759748')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Egypt', 'eg', '2014-11-05 09:38:29.885115', '2014-11-05 09:38:29.885115')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('El Salvador', 'sv', '2014-11-05 09:38:30.002411', '2014-11-05 09:38:30.002411')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Equatorial Guinea', 'gq', '2014-11-05 09:38:30.111077', '2014-11-05 09:38:30.111077')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Eritrea', 'er', '2014-11-05 09:38:30.237488', '2014-11-05 09:38:30.237488')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Estonia', 'ee', '2014-11-05 09:38:30.442469', '2014-11-05 09:38:30.442469')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ethiopia', 'et', '2014-11-05 09:38:30.555251', '2014-11-05 09:38:30.555251')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Falkland Islands', 'fk', '2014-11-05 09:38:30.672260', '2014-11-05 09:38:30.672260')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Faroe Islands', 'fo', '2014-11-05 09:38:30.789135', '2014-11-05 09:38:30.789135')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Fiji', 'fj', '2014-11-05 09:38:30.956254', '2014-11-05 09:38:30.956254')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Finland', 'fi', '2014-11-05 09:38:31.139984', '2014-11-05 09:38:31.139984')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Former Czechoslovakia', 'cs', '2014-11-05 09:38:31.323825', '2014-11-05 09:38:31.323825')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Former USSR', 'su', '2014-11-05 09:38:31.516080', '2014-11-05 09:38:31.516080')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('France', 'fr', '2014-11-05 09:38:31.641602', '2014-11-05 09:38:31.641602')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('France (European Territory)', 'fx', '2014-11-05 09:38:31.774886', '2014-11-05 09:38:31.774886')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('French Guyana', 'gf', '2014-11-05 09:38:31.950670', '2014-11-05 09:38:31.950670')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('French Southern Territories', 'tf', '2014-11-05 09:38:32.167444', '2014-11-05 09:38:32.167444')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Gabon', 'ga', '2014-11-05 09:38:32.334679', '2014-11-05 09:38:32.334679')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Gambia', 'gm', '2014-11-05 09:38:32.451566', '2014-11-05 09:38:32.451566')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Georgia', 'ge', '2014-11-05 09:38:32.560305', '2014-11-05 09:38:32.560305')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Germany', 'de', '2014-11-05 09:38:32.783066', '2014-11-05 09:38:32.783066')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ghana', 'gh', '2014-11-05 09:38:32.903050', '2014-11-05 09:38:32.903050')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Gibraltar', 'gi', '2014-11-05 09:38:33.061720', '2014-11-05 09:38:33.061720')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Great Britain', 'gb', '2014-11-05 09:38:33.187765', '2014-11-05 09:38:33.187765')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Greece', 'gr', '2014-11-05 09:38:33.305317', '2014-11-05 09:38:33.305317')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Greenland', 'gl', '2014-11-05 09:38:33.422334', '2014-11-05 09:38:33.422334')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Grenada', 'gd', '2014-11-05 09:38:33.539394', '2014-11-05 09:38:33.539394')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guadeloupe (French)', 'gp', '2014-11-05 09:38:33.664807', '2014-11-05 09:38:33.664807')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guam (USA)', 'gu', '2014-11-05 09:38:33.856842', '2014-11-05 09:38:33.856842')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guatemala', 'gt', '2014-11-05 09:38:33.990512', '2014-11-05 09:38:33.990512')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guinea', 'gn', '2014-11-05 09:38:34.116027', '2014-11-05 09:38:34.116027')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guinea Bissau', 'gw', '2014-11-05 09:38:34.291436', '2014-11-05 09:38:34.291436')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Guyana', 'gy', '2014-11-05 09:38:34.466933', '2014-11-05 09:38:34.466933')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Haiti', 'ht', '2014-11-05 09:38:34.600631', '2014-11-05 09:38:34.600631')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Heard and McDonald Islands', 'hm', '2014-11-05 09:38:34.767752', '2014-11-05 09:38:34.767752')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Holy See (Vatican City State)', 'va', '2014-11-05 09:38:34.926468', '2014-11-05 09:38:34.926468')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Honduras', 'hn', '2014-11-05 09:38:35.118514', '2014-11-05 09:38:35.118514')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Hong Kong', 'hk', '2014-11-05 09:38:35.302321', '2014-11-05 09:38:35.302321')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Hungary', 'hu', '2014-11-05 09:38:35.486576', '2014-11-05 09:38:35.486576')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Iceland', 'is', '2014-11-05 09:38:35.603115', '2014-11-05 09:38:35.603115')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('India', 'in', '2014-11-05 09:38:35.770113', '2014-11-05 09:38:35.770113')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Indonesia', 'id', '2014-11-05 09:38:35.937231', '2014-11-05 09:38:35.937231')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Iran', 'ir', '2014-11-05 09:38:36.121020', '2014-11-05 09:38:36.121020')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Iraq', 'iq', '2014-11-05 09:38:36.297429', '2014-11-05 09:38:36.297429')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ireland', 'ie', '2014-11-05 09:38:36.473125', '2014-11-05 09:38:36.473125')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Israel', 'il', '2014-11-05 09:38:36.648212', '2014-11-05 09:38:36.648212')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Italy', 'it', '2014-11-05 09:38:36.773534', '2014-11-05 09:38:36.773534')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ivory Coast (Cote D''Ivoire)', 'ci', '2014-11-05 09:38:36.948954', '2014-11-05 09:38:36.948954')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Jamaica', 'jm', '2014-11-05 09:38:37.157660', '2014-11-05 09:38:37.157660')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Japan', 'jp', '2014-11-05 09:38:37.349838', '2014-11-05 09:38:37.349838')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Jordan', 'jo', '2014-11-05 09:38:37.483520', '2014-11-05 09:38:37.483520')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Kazakhstan', 'kz', '2014-11-05 09:38:37.600554', '2014-11-05 09:38:37.600554')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Kenya', 'ke', '2014-11-05 09:38:37.717673', '2014-11-05 09:38:37.717673')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Kiribati', 'ki', '2014-11-05 09:38:37.884713', '2014-11-05 09:38:37.884713')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Kuwait', 'kw', '2014-11-05 09:38:37.993466', '2014-11-05 09:38:37.993466')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Kyrgyz Republic (Kyrgyzstan)', 'kg', '2014-11-05 09:38:38.127234', '2014-11-05 09:38:38.127234')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Laos', 'la', '2014-11-05 09:38:38.244299', '2014-11-05 09:38:38.244299')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Latvia', 'lv', '2014-11-05 09:38:38.369699', '2014-11-05 09:38:38.369699')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Lebanon', 'lb', '2014-11-05 09:38:38.536875', '2014-11-05 09:38:38.536875')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Lesotho', 'ls', '2014-11-05 09:38:38.720625', '2014-11-05 09:38:38.720625')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Liberia', 'lr', '2014-11-05 09:38:38.845978', '2014-11-05 09:38:38.845978')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Libya', 'ly', '2014-11-05 09:38:39.021367', '2014-11-05 09:38:39.021367')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Liechtenstein', 'li', '2014-11-05 09:38:39.146870', '2014-11-05 09:38:39.146870')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Lithuania', 'lt', '2014-11-05 09:38:39.273091', '2014-11-05 09:38:39.273091')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Luxembourg', 'lu', '2014-11-05 09:38:39.465216', '2014-11-05 09:38:39.465216')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Macau', 'mo', '2014-11-05 09:38:39.590644', '2014-11-05 09:38:39.590644')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Macedonia', 'mk', '2014-11-05 09:38:39.774354', '2014-11-05 09:38:39.774354')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Madagascar', 'mg', '2014-11-05 09:38:39.958529', '2014-11-05 09:38:39.958529')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Malawi', 'mw', '2014-11-05 09:38:40.150273', '2014-11-05 09:38:40.150273')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Malaysia', 'my', '2014-11-05 09:38:40.275678', '2014-11-05 09:38:40.275678')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Maldives', 'mv', '2014-11-05 09:38:40.409294', '2014-11-05 09:38:40.409294')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mali', 'ml', '2014-11-05 09:38:40.543076', '2014-11-05 09:38:40.543076')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Malta', 'mt', '2014-11-05 09:38:40.651892', '2014-11-05 09:38:40.651892')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Marshall Islands', 'mh', '2014-11-05 09:38:40.844021', '2014-11-05 09:38:40.844021')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Martinique (French)', 'mq', '2014-11-05 09:38:41.035987', '2014-11-05 09:38:41.035987')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mauritania', 'mr', '2014-11-05 09:38:41.144760', '2014-11-05 09:38:41.144760')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mauritius', 'mu', '2014-11-05 09:38:41.311381', '2014-11-05 09:38:41.311381')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mayotte', 'yt', '2014-11-05 09:38:41.494262', '2014-11-05 09:38:41.494262')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mexico', 'mx', '2014-11-05 09:38:41.679326', '2014-11-05 09:38:41.679326')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Micronesia', 'fm', '2014-11-05 09:38:41.804631', '2014-11-05 09:38:41.804631')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Moldavia', 'md', '2014-11-05 09:38:41.930165', '2014-11-05 09:38:41.930165')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Monaco', 'mc', '2014-11-05 09:38:42.055485', '2014-11-05 09:38:42.055485')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mongolia', 'mn', '2014-11-05 09:38:42.314196', '2014-11-05 09:38:42.314196')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Montserrat', 'ms', '2014-11-05 09:38:42.449062', '2014-11-05 09:38:42.449062')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Morocco', 'ma', '2014-11-05 09:38:42.582939', '2014-11-05 09:38:42.582939')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Mozambique', 'mz', '2014-11-05 09:38:42.708257', '2014-11-05 09:38:42.708257')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Myanmar', 'mm', '2014-11-05 09:38:42.841943', '2014-11-05 09:38:42.841943')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Namibia', 'na', '2014-11-05 09:38:43.009188', '2014-11-05 09:38:43.009188')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Nauru', 'nr', '2014-11-05 09:38:43.126239', '2014-11-05 09:38:43.126239')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Nepal', 'np', '2014-11-05 09:38:43.259954', '2014-11-05 09:38:43.259954')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Netherlands', 'nl', '2014-11-05 09:38:43.368640', '2014-11-05 09:38:43.368640')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Netherlands Antilles', 'an', '2014-11-05 09:38:43.552416', '2014-11-05 09:38:43.552416')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Neutral Zone', 'nt', '2014-11-05 09:38:43.677819', '2014-11-05 09:38:43.677819')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('New Caledonia (French)', 'nc', '2014-11-05 09:38:43.794754', '2014-11-05 09:38:43.794754')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('New Zealand', 'nz', '2014-11-05 09:38:43.912623', '2014-11-05 09:38:43.912623')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Nicaragua', 'ni', '2014-11-05 09:38:44.029138', '2014-11-05 09:38:44.029138')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Niger', 'ne', '2014-11-05 09:38:44.221241', '2014-11-05 09:38:44.221241')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Nigeria', 'ng', '2014-11-05 09:38:44.338290', '2014-11-05 09:38:44.338290')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Niue', 'nu', '2014-11-05 09:38:44.455381', '2014-11-05 09:38:44.455381')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Norfolk Island', 'nf', '2014-11-05 09:38:44.572449', '2014-11-05 09:38:44.572449')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('North Korea', 'kp', '2014-11-05 09:38:44.689557', '2014-11-05 09:38:44.689557')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Northern Mariana Islands', 'mp', '2014-11-05 09:38:44.815051', '2014-11-05 09:38:44.815051')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Norway', 'no', '2014-11-05 09:38:44.949700', '2014-11-05 09:38:44.949700')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Oman', 'om', '2014-11-05 09:38:45.125216', '2014-11-05 09:38:45.125216')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Pakistan', 'pk', '2014-11-05 09:38:45.275791', '2014-11-05 09:38:45.275791')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Palau', 'pw', '2014-11-05 09:38:45.410859', '2014-11-05 09:38:45.410859')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Panama', 'pa', '2014-11-05 09:38:45.535917', '2014-11-05 09:38:45.535917')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Papua New Guinea', 'pg', '2014-11-05 09:38:45.653005', '2014-11-05 09:38:45.653005')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Paraguay', 'py', '2014-11-05 09:38:45.803631', '2014-11-05 09:38:45.803631')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Peru', 'pe', '2014-11-05 09:38:45.927819', '2014-11-05 09:38:45.927819')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Philippines', 'ph', '2014-11-05 09:38:46.044747', '2014-11-05 09:38:46.044747')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Pitcairn Island', 'pn', '2014-11-05 09:38:46.161688', '2014-11-05 09:38:46.161688')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Poland', 'pl', '2014-11-05 09:38:46.337071', '2014-11-05 09:38:46.337071')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Polynesia (French)', 'pf', '2014-11-05 09:38:46.454187', '2014-11-05 09:38:46.454187')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Portugal', 'pt', '2014-11-05 09:38:46.571296', '2014-11-05 09:38:46.571296')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Puerto Rico', 'pr', '2014-11-05 09:38:46.688390', '2014-11-05 09:38:46.688390')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Qatar', 'qa', '2014-11-05 09:38:46.805399', '2014-11-05 09:38:46.805399')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Reunion (French)', 're', '2014-11-05 09:38:46.964344', '2014-11-05 09:38:46.964344')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Romania', 'ro', '2014-11-05 09:38:47.081696', '2014-11-05 09:38:47.081696')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Russian Federation', 'ru', '2014-11-05 09:38:47.356604', '2014-11-05 09:38:47.356604')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Rwanda', 'rw', '2014-11-05 09:38:47.490457', '2014-11-05 09:38:47.490457')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('S. Georgia & S. Sandwich Isls.', 'gs', '2014-11-05 09:38:47.700520', '2014-11-05 09:38:47.700520')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Helena', 'sh', '2014-11-05 09:38:47.892596', '2014-11-05 09:38:47.892596')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Kitts & Nevis Anguilla', 'kn', '2014-11-05 09:38:48.084693', '2014-11-05 09:38:48.084693')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Lucia', 'lc', '2014-11-05 09:38:48.218430', '2014-11-05 09:38:48.218430')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Pierre and Miquelon', 'pm', '2014-11-05 09:38:48.352110', '2014-11-05 09:38:48.352110')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Tome (Sao Tome) and Principe', 'st', '2014-11-05 09:38:48.485858', '2014-11-05 09:38:48.485858')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saint Vincent & Grenadines', 'vc', '2014-11-05 09:38:48.602963', '2014-11-05 09:38:48.602963')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Samoa', 'ws', '2014-11-05 09:38:48.720034', '2014-11-05 09:38:48.720034')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('San Marino', 'sm', '2014-11-05 09:38:48.837077', '2014-11-05 09:38:48.837077')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Saudi Arabia', 'sa', '2014-11-05 09:38:48.995735', '2014-11-05 09:38:48.995735')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Senegal', 'sn', '2014-11-05 09:38:49.162923', '2014-11-05 09:38:49.162923')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Seychelles', 'sc', '2014-11-05 09:38:49.279920', '2014-11-05 09:38:49.279920')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Sierra Leone', 'sl', '2014-11-05 09:38:49.447102', '2014-11-05 09:38:49.447102')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Singapore', 'sg', '2014-11-05 09:38:49.614163', '2014-11-05 09:38:49.614163')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Slovak Republic', 'sk', '2014-11-05 09:38:49.806218', '2014-11-05 09:38:49.806218')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Slovenia', 'si', '2014-11-05 09:38:49.931724', '2014-11-05 09:38:49.931724')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Solomon Islands', 'sb', '2014-11-05 09:38:50.098688', '2014-11-05 09:38:50.098688')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Somalia', 'so', '2014-11-05 09:38:50.273987', '2014-11-05 09:38:50.273987')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('South Africa', 'za', '2014-11-05 09:38:50.457858', '2014-11-05 09:38:50.457858')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('South Korea', 'kr', '2014-11-05 09:38:50.641497', '2014-11-05 09:38:50.641497')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Spain', 'es', '2014-11-05 09:38:50.816959', '2014-11-05 09:38:50.816959')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Sri Lanka', 'lk', '2014-11-05 09:38:50.976781', '2014-11-05 09:38:50.976781')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Sudan', 'sd', '2014-11-05 09:38:51.085372', '2014-11-05 09:38:51.085372')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Suriname', 'sr', '2014-11-05 09:38:51.285640', '2014-11-05 09:38:51.285640')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Svalbard and Jan Mayen Islands', 'sj', '2014-11-05 09:38:51.494535', '2014-11-05 09:38:51.494535')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Swaziland', 'sz', '2014-11-05 09:38:51.603247', '2014-11-05 09:38:51.603247')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Sweden', 'se', '2014-11-05 09:38:51.795359', '2014-11-05 09:38:51.795359')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Switzerland', 'ch', '2014-11-05 09:38:51.979214', '2014-11-05 09:38:51.979214')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Syria', 'sy', '2014-11-05 09:38:52.096452', '2014-11-05 09:38:52.096452')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tadjikistan', 'tj', '2014-11-05 09:38:52.421654', '2014-11-05 09:38:52.421654')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Taiwan', 'tw', '2014-11-05 09:38:52.588662', '2014-11-05 09:38:52.588662')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tanzania', 'tz', '2014-11-05 09:38:52.897886', '2014-11-05 09:38:52.897886')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Thailand', 'th', '2014-11-05 09:38:53.023380', '2014-11-05 09:38:53.023380')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Togo', 'tg', '2014-11-05 09:38:53.198738', '2014-11-05 09:38:53.198738')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tokelau', 'tk', '2014-11-05 09:38:53.399082', '2014-11-05 09:38:53.399082')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tonga', 'to', '2014-11-05 09:38:53.524551', '2014-11-05 09:38:53.524551')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Trinidad and Tobago', 'tt', '2014-11-05 09:38:53.649847', '2014-11-05 09:38:53.649847')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tunisia', 'tn', '2014-11-05 09:38:53.767096', '2014-11-05 09:38:53.767096')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Turkey', 'tr', '2014-11-05 09:38:53.892478', '2014-11-05 09:38:53.892478')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Turkmenistan', 'tm', '2014-11-05 09:38:54.060573', '2014-11-05 09:38:54.060573')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Turks and Caicos Islands', 'tc', '2014-11-05 09:38:54.235939', '2014-11-05 09:38:54.235939')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Tuvalu', 'tv', '2014-11-05 09:38:54.344596', '2014-11-05 09:38:54.344596')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Uganda', 'ug', '2014-11-05 09:38:54.536647', '2014-11-05 09:38:54.536647')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Ukraine', 'ua', '2014-11-05 09:38:54.712105', '2014-11-05 09:38:54.712105')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('United Arab Emirates', 'ae', '2014-11-05 09:38:54.879245', '2014-11-05 09:38:54.879245')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('United Kingdom', 'uk', '2014-11-05 09:38:55.046255', '2014-11-05 09:38:55.046255')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('United States', 'us', '2014-11-05 09:38:55.163247', '2014-11-05 09:38:55.163247')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Uruguay', 'uy', '2014-11-05 09:38:55.297107', '2014-11-05 09:38:55.297107')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('USA Minor Outlying Islands', 'um', '2014-11-05 09:38:55.414276', '2014-11-05 09:38:55.414276')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Uzbekistan', 'uz', '2014-11-05 09:38:55.539698', '2014-11-05 09:38:55.539698')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Vanuatu', 'vu', '2014-11-05 09:38:55.665028', '2014-11-05 09:38:55.665028')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Venezuela', 've', '2014-11-05 09:38:55.790521', '2014-11-05 09:38:55.790521')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Vietnam', 'vn', '2014-11-05 09:38:55.924198', '2014-11-05 09:38:55.924198')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Virgin Islands (British)', 'vg', '2014-11-05 09:38:56.057843', '2014-11-05 09:38:56.057843')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Virgin Islands (USA)', 'vi', '2014-11-05 09:38:56.249992', '2014-11-05 09:38:56.249992')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Wallis and Futuna Islands', 'wf', '2014-11-05 09:38:56.383902', '2014-11-05 09:38:56.383902')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Western Sahara', 'eh', '2014-11-05 09:38:56.559082', '2014-11-05 09:38:56.559082')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Yemen', 'ye', '2014-11-05 09:38:56.734718', '2014-11-05 09:38:56.734718')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Yugoslavia', 'yu', '2014-11-05 09:38:56.843241', '2014-11-05 09:38:56.843241')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Zaire', 'zr', '2014-11-05 09:38:57.036326', '2014-11-05 09:38:57.036326')
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Zambia', 'zm', '2014-11-05 09:38:57.228427', '2014-11-05 09:38:57.228427')[0m
+  [1m[35m (0.0ms)[0m  INSERT INTO "countries" ("name","code","created_at","updated_at") VALUES ('Zimbabwe', 'zw', '2014-11-05 09:38:57.403814', '2014-11-05 09:38:57.403814')
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "altered_countries"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20141106144324')
+  [1m[36m (121.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:48:11 +0200
+Processing by UsersController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered users/index.html.erb within layouts/application (29.4ms)
+Completed 500 Internal Server Error in 121.6ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x00000002854510>):
+    11:       <tr>
+    12:         <td><%= country.name %></td>
+    13:         <td><%= country.code %></td>
+    14:         <td><%= country.visited? ? 'Visited' : 'Not Visited' %></td>
+    15:         <td><%= link_to 'Show', country %></td>
+    16:         <td><%= link_to 'Edit', edit_country_path(country) %></td>
+    17:       </tr>
+  app/views/users/index.html.erb:14:in `block in _app_views_users_index_html_erb__1746754770745408379_22807720'
+  app/views/users/index.html.erb:10:in `each'
+  app/views/users/index.html.erb:10:in `_app_views_users_index_html_erb__1746754770745408379_22807720'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-11-06 16:49:29 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 84.7ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:49:29 +0200
+Processing by UsersController#index as HTML
+  [1m[35mCountry Load (1.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered users/index.html.erb within layouts/application (97.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 198.2ms (Views: 175.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:30 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:49:49 +0200
+Processing by UsersController#index as HTML
+  [1m[35mCountry Load (0.9ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered users/index.html.erb within layouts/application (96.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 111.2ms (Views: 102.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:50 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Processing by UsersController#index as HTML
+  [1m[35mCountry Load (1.7ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered users/index.html.erb within layouts/application (74.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 122.7ms (Views: 80.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:49:53 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:50:04 +0200
+Processing by UsersController#index as HTML
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered users/index.html.erb within layouts/application (102.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 249.0ms (Views: 166.6ms | ActiveRecord: 25.2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /users.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:50:05 +0200
+Served asset /view_controller.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:52:10 +0200
+Processing by UsersController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered users/index.html.erb within layouts/application (97.0ms)
+Completed 500 Internal Server Error in 189.4ms
+
+ActionView::Template::Error (undefined local variable or method `current' for #<#<Class:0x000000036fafb0>:0x000000036fe278>):
+    1: <h2>Hello <%= current.user%></h2>
+    2: <table>
+    3:   <tr>
+    4:     <th>Name</th>
+  app/views/users/index.html.erb:1:in `_app_views_users_index_html_erb__4132561288723829914_30348760'
+  app/controllers/users_controller.rb:5:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:53:15 +0200
+Processing by UsersController#index as HTML
+  [1m[35mCountry Load (1.1ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (122.5ms)
+Completed 200 OK in 147.2ms (Views: 136.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /users.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:16 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Processing by UsersController#index as HTML
+  [1m[35mCountry Load (1.2ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered users/index.html.erb within layouts/application (102.0ms)
+Completed 200 OK in 116.9ms (Views: 107.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /users.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-06 16:53:41 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
