@@ -23608,3 +23608,126 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 16:48:17 +0200
 Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 17:23:47 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user3@mail.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user3@mail.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (177.2ms)
+Compiled application.js  (2ms)  (pid 19577)
+Completed 200 OK in 321.5ms (Views: 231.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/countries_user_controller.css?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /countries_user_controller.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /jquery.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /application.js - 200 OK (14ms)
+
+
+Started GET "/assets/countries_user_controller.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /countries_user_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /view_controller.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 17:23:48 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user3@mail.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user3@mail.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (128.9ms)
+Compiled application.js  (2ms)  (pid 19577)
+Completed 200 OK in 155.9ms (Views: 147.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/countries_user_controller.css?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /countries_user_controller.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /jquery.js - 304 Not Modified (33ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /application.js - 200 OK (7ms)
+
+
+Started GET "/assets/countries_user_controller.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /countries_user_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 17:28:47 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
