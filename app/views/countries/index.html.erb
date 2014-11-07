@@ -14,16 +14,18 @@
       </tr>
     </table>
   </div>
-
-  <h1>Countries for <%= current_user.email %></h1>
-
+</section>
+  <h3>Countries for <%= current_user.email %></h3>
+  <%= form_for @countries_user do |f| %>
+    <%=f.hidden_field :user, :value=>current_user.email %>
+    <%=f.submit "Mark all checked as visited"%>
   <table>
     <tr>
       <th>Name</th>
       <th>Code</th>
       <th>Status</th>
       <th></th>
-      <th></th>
+      <th><input type="checkbox"></th>
     </tr>
 
   <% @countries.each do |country| %>
@@ -32,7 +34,8 @@
       <td><%= country.code %></td>
       <td><%= link_to 'Show', country %></td>
       <td><%= link_to 'Edit', edit_country_path(country) %></td>
+      <td><%= check_box_tag "country[]", country.code%></td>
     </tr>
   <% end %>
+        <% end %>
   </table>
-</section>
