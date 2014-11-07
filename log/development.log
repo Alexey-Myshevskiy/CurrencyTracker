@@ -16167,3 +16167,2046 @@ Served asset /users.js - 304 Not Modified (0ms)
 
 Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:14:17 +0200
 Served asset /view_controller.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:16:38 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "countries" WHERE "countries"."visited" = 't'
+SQLite3::SQLException: no such column: countries.visited: SELECT COUNT(*) FROM "countries"  WHERE "countries"."visited" = 't'
+  Rendered countries/index.html.erb within layouts/application (61.1ms)
+Completed 500 Internal Server Error in 175.1ms
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: countries.visited: SELECT COUNT(*) FROM "countries"  WHERE "countries"."visited" = 't'):
+    3:     <table>
+    4:       <tr>
+    5:         <th>Visited</th>
+    6:         <td><%= Country.visited.count %></td>
+    7:       </tr><tr>
+    8:         <th>Not Visited</th>
+    9:         <td><%= Country.not_visited.count %></td>
+  app/views/countries/index.html.erb:6:in `_app_views_countries_index_html_erb___1885738428212654220_33287580'
+  app/controllers/countries_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.7ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:34:18 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.7ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3[0m
+  Rendered countries/index.html.erb within layouts/application (28.2ms)
+Completed 500 Internal Server Error in 49.5ms
+
+ActionView::Template::Error (undefined local variable or method `total' for #<Class:0x007fe5880cde90>):
+    1: <% puts "#"*80 %>
+    2: <%  puts CountriesUser.count_of_visited_countries(current_user)%>
+    3: <% CountriesUser.count_of_unvisited_countries(current_user) %>
+    4: <% puts "#"*80 %>
+    5: <section>
+    6:   <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='100px'>
+  app/models/countries_user.rb:12:in `count_of_unvisited_countries'
+  app/views/countries/index.html.erb:3:in `_app_views_countries_index_html_erb___1885738428212654220_70311907487320'
+  app/controllers/countries_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.9ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:34:47 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (0.8ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered countries/index.html.erb within layouts/application (67.8ms)
+Completed 500 Internal Server Error in 90.9ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007fe588761b80>):
+    30:     <tr>
+    31:       <td><%= country.name %></td>
+    32:       <td><%= country.code %></td>
+    33:       <td><%= country.visited? ? 'Visited' : 'Not Visited' %></td>
+    34:       <td><%= link_to 'Show', country %></td>
+    35:       <td><%= link_to 'Edit', edit_country_path(country) %></td>
+    36:     </tr>
+  app/views/countries/index.html.erb:33:in `block in _app_views_countries_index_html_erb___1885738428212654220_70311907487320'
+  app/views/countries/index.html.erb:29:in `each'
+  app/views/countries/index.html.erb:29:in `_app_views_countries_index_html_erb___1885738428212654220_70311907487320'
+  app/controllers/countries_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:37:22 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (1.4ms)[0m  SELECT "countries".* FROM "countries" 
+ERROR: compiling _app_views_countries_index_html_erb___1885738428212654220_70311906496060 RAISED /home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:38: unknown regexp options - tabl
+unmatched close parenthesis: /tr>
+');   #end 
+@output_buffer.safe_concat('  </
+/home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:39: syntax error, unexpected '<'
+</section>');@output_buffer.to_s
+ ^
+/home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:39: unterminated regexp meets end of file
+Function body:           def _app_views_countries_index_html_erb___1885738428212654220_70311906496060(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "countries/index";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new; puts "#"*80 
+  puts "count of visited= #{CountriesUser.count_of_visited_countries(current_user)}"
+ puts "count of not visited= #{CountriesUser.count_of_unvisited_countries(current_user)} 
+ puts "#"*80 
+@output_buffer.safe_concat('<section>
+  <div id="visited_countries_chart" class="simple_pie_chart" width=\'300px\' height=\'100px\'>
+    <table>
+      <tr>
+        <th>Visited</th>
+        <td>');@output_buffer.append= ( CountriesUser.count_of_visited_countries(current_user) );@output_buffer.safe_concat('</td>
+      </tr><tr>
+        <th>Not Visited</th>
+        <td>');@output_buffer.append= ( CountriesUser.count_of_unvisited_countries(current_user) );@output_buffer.safe_concat('</td>
+      </tr>
+    </table>
+  </div>
+
+  <h1>Countries</h1>
+
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Status</th>
+      <th></th>
+      <th></th>
+    </tr>
+
+');   # @countries.each do |country| 
+@output_buffer.safe_concat('    <tr>
+      <td>');@output_buffer.append= (# country.name );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( #country.code );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( #country.visited? ? 'Visited' : 'Not Visited' );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( #link_to 'Show', country );@output_buffer.safe_concat('</td>
+      <td>');@output_buffer.append= ( #link_to 'Edit', edit_country_path(country) );@output_buffer.safe_concat('</td>
+    </tr>
+');   #end 
+@output_buffer.safe_concat('  </table>
+</section>');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:297:in `module_eval'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:297:in `compile'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:244:in `block in compile!'
+<internal:prelude>:10:in `synchronize'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:232:in `compile!'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:144:in `block in render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications.rb:125:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/template.rb:143:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/template_renderer.rb:47:in `block (2 levels) in render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications.rb:123:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/template_renderer.rb:46:in `block in render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/template_renderer.rb:54:in `render_with_layout'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/template_renderer.rb:45:in `render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/template_renderer.rb:18:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_view/renderer/renderer.rb:17:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/rendering.rb:110:in `_render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/streaming.rb:225:in `_render_template'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/rendering.rb:103:in `render_to_body'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/renderers.rb:28:in `render_to_body'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/compatibility.rb:50:in `render_to_body'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/rendering.rb:88:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/home/alexey/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/benchmark.rb:295:in `realtime'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:83:in `cleanup_view_runtime'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activerecord-3.2.15/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/mime_responds.rb:196:in `respond_to'
+/home/alexey/Documents/CurrencyTracker/app/controllers/countries_controller.rb:7:in `index'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/base.rb:167:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:414:in `_run__2446282286940386202__process_action__1372616486467708086__callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications.rb:123:in `block in instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/notifications.rb:123:in `instrument'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activerecord-3.2.15/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/base.rb:121:in `process'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/abstract_controller/rendering.rb:45:in `process'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal.rb:203:in `dispatch'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_controller/metal.rb:246:in `block in action'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/routing/route_set.rb:73:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/routing/route_set.rb:36:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/journey-1.0.4/lib/journey/router.rb:56:in `each'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/journey-1.0.4/lib/journey/router.rb:56:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/routing/route_set.rb:608:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/warden-1.2.1/lib/warden/manager.rb:35:in `block in call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/warden-1.2.1/lib/warden/manager.rb:34:in `catch'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/warden-1.2.1/lib/warden/manager.rb:34:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/etag.rb:23:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/conditionalget.rb:25:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/head.rb:14:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/flash.rb:242:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:210:in `context'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/session/abstract/id.rb:205:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activerecord-3.2.15/lib/active_record/query_cache.rb:64:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activerecord-3.2.15/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:405:in `_run__1407755098017429933__call__2849203657050561082__callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:405:in `__run_callback'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/rack/logger.rb:32:in `call_app'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/rack/logger.rb:16:in `block in call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/tagged_logging.rb:22:in `tagged'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/rack/logger.rb:16:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/methodoverride.rb:21:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/runtime.rb:17:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/activesupport-3.2.15/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/lock.rb:15:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/static.rb:63:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/engine.rb:484:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/application.rb:231:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/content_length.rb:14:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/railties-3.2.15/lib/rails/rack/log_tailer.rb:17:in `call'
+/home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/rack-1.4.5/lib/rack/handler/webrick.rb:59:in `service'
+/home/alexey/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+/home/alexey/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+/home/alexey/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+  Rendered countries/index.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 31.8ms
+
+ActionView::Template::Error (/home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:38: unknown regexp options - tabl
+unmatched close parenthesis: /tr>
+');   #end 
+@output_buffer.safe_concat('  </
+/home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:39: syntax error, unexpected '<'
+</section>');@output_buffer.to_s
+ ^
+/home/alexey/Documents/CurrencyTracker/app/views/countries/index.html.erb:39: unterminated regexp meets end of file):
+    35:       <td><%= #link_to 'Edit', edit_country_path(country) %></td>
+    36:     </tr>
+    37:   <% #end %>
+    38:   </table>
+    39: </section>
+  app/controllers/countries_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 38.2ms (Views: 30.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /scaffold.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /jquery.js - 304 Not Modified (35ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:15 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 32.5ms (Views: 21.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:38:53 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"9nG2WY3TQd0X7iHo6GQJwausx9KoZxxZHAE5fRTf/m4="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12.0ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 0.5ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (1.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 40.5ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:44 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'admin@mail.com' LIMIT 1
+Completed 401 Unauthorized in 4.1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"admin@mail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 77.3ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:39:55 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 68.7ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 73.5ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:21 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user@example.com' LIMIT 1
+Completed 401 Unauthorized in 68.2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 104.7ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:41:28 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+Completed 401 Unauthorized in 72.2ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 73.4ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:20 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:42:26 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1
+Completed 401 Unauthorized in 68.1ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/shared/_links.erb (0.3ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/devise-2.2.3/app/views/devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 73.0ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:27 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Gvr12WAPTo+9UAinzLhtYwtBZsL0eer8wN2hs0MpyQ=", "user"=>{"email"=>"user2@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@example.com' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.7ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2014-11-07 07:42:32.327891', "sign_in_count" = 2, "updated_at" = '2014-11-07 07:42:32.329780' WHERE "users"."id" = 2[0m
+  [1m[35m (127.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 206.7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCountry Load (0.7ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered users/index.html.erb within layouts/application (95.4ms)
+Completed 200 OK in 108.3ms (Views: 100.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /scaffold.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:32 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.1ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (40.2ms)
+Completed 200 OK in 52.6ms (Views: 44.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:42:37 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 09:43:08 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.5ms)[0m  [1mSELECT "currencies".* FROM "currencies" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "currencies".* FROM "currencies" 
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = 'af' LIMIT 1[0m
+  Rendered currencies/index.html.erb within layouts/application (44.3ms)
+Completed 500 Internal Server Error in 57.5ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x00000003d11de0>):
+    3:     <table>
+    4:       <tr>
+    5:         <th>Collected</th>
+    6:         <td><%= Currency.collected.count %></td>
+    7:       </tr><tr>
+    8:         <th>Not Collected</th>
+    9:         <td><%= Currency.not_collected.count %></td>
+  app/models/currency.rb:20:in `collected?'
+  app/models/currency.rb:12:in `block in collected'
+  app/models/currency.rb:12:in `select'
+  app/models/currency.rb:12:in `collected'
+  app/views/currencies/index.html.erb:6:in `_app_views_currencies_index_html_erb__2323639050994412460_70311908249500'
+  app/controllers/currencies_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 09:44:03 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[35mCurrency Load (0.8ms)[0m  SELECT "currencies".* FROM "currencies" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "currencies".* FROM "currencies" [0m
+  [1m[35mCountry Load (0.2ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."code" = 'af' LIMIT 1
+  Rendered currencies/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 15.7ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007fe5887a43e0>):
+    3:     <table>
+    4:       <tr>
+    5:         <th>Collected</th>
+    6:         <td><%= Currency.collected.count %></td>
+    7:       </tr><tr>
+    8:         <th>Not Collected</th>
+    9:         <td><%= Currency.not_collected.count %></td>
+  app/models/currency.rb:20:in `collected?'
+  app/models/currency.rb:12:in `block in collected'
+  app/models/currency.rb:12:in `select'
+  app/models/currency.rb:12:in `collected'
+  app/views/currencies/index.html.erb:6:in `_app_views_currencies_index_html_erb__2323639050994412460_35767460'
+  app/controllers/currencies_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.1ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 09:44:05 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.7ms)[0m  [1mSELECT "currencies".* FROM "currencies" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "currencies".* FROM "currencies" 
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = 'af' LIMIT 1[0m
+  Rendered currencies/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 12.7ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x000000042a74f8>):
+    3:     <table>
+    4:       <tr>
+    5:         <th>Collected</th>
+    6:         <td><%= Currency.collected.count %></td>
+    7:       </tr><tr>
+    8:         <th>Not Collected</th>
+    9:         <td><%= Currency.not_collected.count %></td>
+  app/models/currency.rb:20:in `collected?'
+  app/models/currency.rb:12:in `block in collected'
+  app/models/currency.rb:12:in `select'
+  app/models/currency.rb:12:in `collected'
+  app/views/currencies/index.html.erb:6:in `_app_views_currencies_index_html_erb__2323639050994412460_35767460'
+  app/controllers/currencies_controller.rb:7:in `index'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[35mCurrency Load (1.0ms)[0m  SELECT "currencies".* FROM "currencies" 
+  Rendered currencies/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+Completed 200 OK in 11.3ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /users.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:44:33 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[35mCurrency Load (0.8ms)[0m  SELECT "currencies".* FROM "currencies" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered currencies/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 13.5ms (Views: 6.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:29 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (1.1ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered countries/index.html.erb within layouts/application (42.2ms)
+Completed 200 OK in 55.5ms (Views: 47.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:46:34 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 09:54:04 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (0.8ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered countries/index.html.erb within layouts/application (106.6ms)
+Completed 200 OK in 120.8ms (Views: 113.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 09:54:05 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:03:20 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[35mCountry Load (0.6ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1  [["code", "af"]]
+  Rendered countries/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 5.7ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007fe5887df698>):
+    12: 
+    13: <p>
+    14:   <b>Status:</b>
+    15:   <%= @country.visited? ? 'Visited' : 'Not Visited' %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/countries/show.html.erb:15:in `_app_views_countries_show_html_erb__3575457594101616337_70311907091040'
+  app/controllers/countries_controller.rb:18:in `show'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.5ms)
+
+
+Started GET "/countries/af/edit" for 127.0.0.1 at 2014-11-07 10:03:30 +0200
+Processing by CountriesController#edit as HTML
+  Parameters: {"id"=>"af"}
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "af"]]
+  Rendered countries/_form.html.erb (2.6ms)
+  Rendered countries/edit.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 5.4ms
+
+ActionView::Template::Error (undefined method `visited' for #<Country:0x007fe588a3d9d0>):
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :visited %><br />
+    24:     <%= f.check_box :visited %>
+    25:   </div>
+    26:   <div class="actions">
+    27:     <%= f.submit %>
+  app/views/countries/_form.html.erb:24:in `block in _app_views_countries__form_html_erb___3177964785190059963_70311908432520'
+  app/views/countries/_form.html.erb:1:in `_app_views_countries__form_html_erb___3177964785190059963_70311908432520'
+  app/views/countries/edit.html.erb:3:in `_app_views_countries_edit_html_erb__4239542141116826226_70311908352540'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (1.9ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered countries/index.html.erb within layouts/application (105.4ms)
+Completed 200 OK in 123.3ms (Views: 109.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:32 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Processing by CountriesController#index as HTML
+  [1m[35mCountry Load (1.8ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  Rendered countries/index.html.erb within layouts/application (109.4ms)
+Completed 200 OK in 123.5ms (Views: 113.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:08:36 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2014-11-07 10:10:16 +0200
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCountry Load (23.1ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered users/index.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 282.3ms (Views: 153.1ms | ActiveRecord: 25.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /users.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /scaffold.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /extensions.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:17 +0200
+Served asset /view_controller.js - 304 Not Modified (1ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 2[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (121.5ms)
+Completed 200 OK in 135.6ms (Views: 126.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /users.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:10:21 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:11:11 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.9ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (144.5ms)
+Completed 200 OK in 171.4ms (Views: 149.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:11:12 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.2ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (122.1ms)
+Completed 200 OK in 139.2ms (Views: 127.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:12 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (1.6ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (121.9ms)
+Completed 200 OK in 136.2ms (Views: 126.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:12:42 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:12:49 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[36mCountry Load (0.4ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "af"]]
+  Rendered countries/show.html.erb within layouts/application (36.8ms)
+Completed 500 Internal Server Error in 41.2ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007f94c81edd90>):
+    12: 
+    13: <p>
+    14:   <b>Status:</b>
+    15:   <%= @country.visited? ? 'Visited' : 'Not Visited' %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/countries/show.html.erb:15:in `_app_views_countries_show_html_erb__317125356435108548_70138494701920'
+  app/controllers/countries_controller.rb:18:in `show'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:14:24 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[35mCountry Load (0.1ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1  [["code", "af"]]
+  [1m[36mCurrency Load (0.1ms)[0m  [1mSELECT "currencies".* FROM "currencies" WHERE "currencies"."country_id" = 'af'[0m
+  Rendered countries/show.html.erb within layouts/application (72.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+Completed 200 OK in 79.3ms (Views: 77.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:14:25 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:16:54 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:16:54 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:16:54 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:17:08 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "af"]]
+  Rendered countries/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 4.3ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007f94ccb99ed0>):
+    12: 
+    13: <p>
+    14:   <b>Status:</b>
+    15:   <%= @country.visited? ? 'Visited' : 'Not Visited' %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/countries/show.html.erb:15:in `_app_views_countries_show_html_erb__317125356435108548_70138533325220'
+  app/controllers/countries_controller.rb:18:in `show'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.1ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:29:00 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[35mCountry Load (0.1ms)[0m  SELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1  [["code", "af"]]
+  Rendered countries/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 3.2ms
+
+ActionView::Template::Error (undefined method `visited?' for #<Country:0x007f94cccc89c8>):
+    12: 
+    13: <p>
+    14:   <b>Status:</b>
+    15:   <%= @country.visited? ? 'Visited' : 'Not Visited' %>
+    16: </p>
+    17: 
+    18: <p>
+  app/views/countries/show.html.erb:15:in `_app_views_countries_show_html_erb__317125356435108548_70138533325220'
+  app/controllers/countries_controller.rb:18:in `show'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:40:55 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (128.6ms)
+Completed 200 OK in 152.7ms (Views: 133.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /scaffold.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:40:56 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:40:59 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[36mCountry Load (0.3ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "af"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered countries/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5.4ms
+
+ActionView::Template::Error (undefined method `email' for "user2@example.com":String):
+    12: 
+    13: <p>
+    14:   <b>Status:</b>
+    15:   <%= CountriesUser.visited?(current_user.email, params[:id]) ? 'Visited' : 'Not Visited' %>
+    16: </p>
+    17: 
+    18: <p>
+  app/models/countries_user.rb:17:in `visited?'
+  app/views/countries/show.html.erb:15:in `_app_views_countries_show_html_erb__317125356435108548_70138534102940'
+  app/controllers/countries_controller.rb:18:in `show'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.2ms)
+
+
+Started GET "/countries/af" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"af"}
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "af"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE (user_id= 'user2@example.com' AND country_code='af')[0m
+  [1m[35mCurrency Load (0.1ms)[0m  SELECT "currencies".* FROM "currencies" WHERE "currencies"."country_id" = 'af'
+  Rendered countries/show.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 49.4ms (Views: 47.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:32 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/dz" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"dz"}
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "dz"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE (user_id= 'user2@example.com' AND country_code='dz')[0m
+  [1m[35mCurrency Load (0.1ms)[0m  SELECT "currencies".* FROM "currencies" WHERE "currencies"."country_id" = 'dz'
+  Rendered countries/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 9.5ms (Views: 7.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:42:49 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.7ms)[0m  [1mSELECT "currencies".* FROM "currencies" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered currencies/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11.7ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:46:40 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/currencies" for 127.0.0.1 at 2014-11-07 10:47:14 +0200
+Processing by CurrenciesController#index as HTML
+  [1m[36mCurrency Load (0.6ms)[0m  [1mSELECT "currencies".* FROM "currencies" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered currencies/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 64.8ms (Views: 59.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:15 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries" for 127.0.0.1 at 2014-11-07 10:47:37 +0200
+Processing by CountriesController#index as HTML
+  [1m[36mCountry Load (0.8ms)[0m  [1mSELECT "countries".* FROM "countries" [0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE "countries_users"."user_id" = 'user2@example.com'[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "countries".* FROM "countries" 
+  Rendered countries/index.html.erb within layouts/application (113.7ms)
+Completed 200 OK in 128.4ms (Views: 120.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:37 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:37 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:37 +0200
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:37 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:38 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/al" for 127.0.0.1 at 2014-11-07 10:47:40 +0200
+Processing by CountriesController#show as HTML
+  Parameters: {"id"=>"al"}
+  [1m[36mCountry Load (0.1ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "al"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "countries_users" WHERE (user_id= 'user2@example.com' AND country_code='al')[0m
+  [1m[35mCurrency Load (0.1ms)[0m  SELECT "currencies".* FROM "currencies" WHERE "currencies"."country_id" = 'al'
+  Rendered countries/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 8.9ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffold.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /scaffold.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /users.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/extensions.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /extensions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/simple_pie_chart.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /simple_pie_chart.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/view_controller.js?body=1" for 127.0.0.1 at 2014-11-07 10:47:41 +0200
+Served asset /view_controller.js - 304 Not Modified (0ms)
+
+
+Started GET "/countries/al/edit" for 127.0.0.1 at 2014-11-07 10:47:45 +0200
+Processing by CountriesController#edit as HTML
+  Parameters: {"id"=>"al"}
+  [1m[36mCountry Load (0.2ms)[0m  [1mSELECT "countries".* FROM "countries" WHERE "countries"."code" = ? LIMIT 1[0m  [["code", "al"]]
+  Rendered countries/_form.html.erb (33.9ms)
+  Rendered countries/edit.html.erb within layouts/application (37.4ms)
+Completed 500 Internal Server Error in 41.1ms
+
+ActionView::Template::Error (undefined method `visited' for #<Country:0x007f94cc995508>):
+    21:   </div>
+    22:   <div class="field">
+    23:     <%= f.label :visited %><br />
+    24:     <%= f.check_box :visited %>
+    25:   </div>
+    26:   <div class="actions">
+    27:     <%= f.submit %>
+  app/views/countries/_form.html.erb:24:in `block in _app_views_countries__form_html_erb___4315478962584597733_70138528712160'
+  app/views/countries/_form.html.erb:1:in `_app_views_countries__form_html_erb___4315478962584597733_70138528712160'
+  app/views/countries/edit.html.erb:3:in `_app_views_countries_edit_html_erb___1629993681500528641_70138532239600'
+
+
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /home/alexey/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.2.15/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.4ms)

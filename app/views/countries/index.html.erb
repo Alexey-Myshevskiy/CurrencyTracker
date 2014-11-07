@@ -1,17 +1,21 @@
+<% puts "#"*80 %>
+<%  puts "count of visited= #{CountriesUser.count_of_visited_countries(current_user)}"%>
+<% puts "count of not visited= #{CountriesUser.count_of_unvisited_countries(current_user)}" %>
+<% puts "#"*80 %>
 <section>
   <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='100px'>
     <table>
       <tr>
         <th>Visited</th>
-        <td><%= Country.visited.count %></td>
+        <td><%= CountriesUser.count_of_visited_countries(current_user) %></td>
       </tr><tr>
         <th>Not Visited</th>
-        <td><%= Country.not_visited.count %></td>
+        <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
       </tr>
     </table>
   </div>
 
-  <h1>Countries</h1>
+  <h1>Countries for <%= current_user.email %></h1>
 
   <table>
     <tr>
@@ -26,7 +30,6 @@
     <tr>
       <td><%= country.name %></td>
       <td><%= country.code %></td>
-      <td><%= country.visited? ? 'Visited' : 'Not Visited' %></td>
       <td><%= link_to 'Show', country %></td>
       <td><%= link_to 'Edit', edit_country_path(country) %></td>
     </tr>
