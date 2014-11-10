@@ -16,7 +16,7 @@ class Currency < ActiveRecord::Base
     all.reject {|currency| currency.collected? }
   end
 
-  def collected?
-    country.nil? ? false : country.visited?
+  def collected?(user)
+    country.nil? ? false : CountriesUser.visited?(user,country.code)
   end
 end

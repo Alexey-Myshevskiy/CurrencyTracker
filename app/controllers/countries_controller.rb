@@ -1,4 +1,5 @@
 class CountriesController < ApplicationController
+  before_filter :authenticate_user!
   # GET /countries
   # GET /countries.xml
   def index
@@ -9,7 +10,6 @@ class CountriesController < ApplicationController
       format.xml  { render :xml => @countries }
       @countries_user=CountriesUser.new
     end
-
   end
 
   # GET /countries/1

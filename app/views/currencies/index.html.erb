@@ -3,22 +3,23 @@
     <table>
       <tr>
         <th>Collected</th>
-        <td></td>
+        <td><%= CountriesUser.count_of_visited_countries(current_user) %></td>
       </tr><tr>
         <th>Not Collected</th>
-        <td></td>
+        <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
       </tr>
     </table>
   </div>
-
-  <h1>Currencies for <%= current_user.email %></h1>
-
+</section>
+  <h3>Currencies for <%= current_user.email %></h3>
+  <%= form_for @currency_f do |f| %>
+  <%=f.submit "Mark all checked as collected"%>
   <table>
     <tr>
       <th>Name</th>
       <th>Code</th>
       <th>Status</th>
-      <th></th>
+      <th><input type="checkbox" class="check_all"></th>
     </tr>
 
   <% @currencies.each do |currency| %>
@@ -26,7 +27,8 @@
       <td><%= currency.name %></td>
       <td><%= currency.code %></td>
       <td><%= link_to 'Show', currency %></td>
+      <td><%= check_box_tag "country[]", currency.country_id%></td>
     </tr>
   <% end %>
+  <%end%>
   </table>
-</section>
