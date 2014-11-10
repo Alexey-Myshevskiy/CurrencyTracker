@@ -6,7 +6,9 @@ class CountriesUsersController < ApplicationController
         if !countries.nil?
             countries.each do|elm|
                   if !CountriesUser.visited?(current_user,elm) # проверка на существование данной записи в базе
-                    CountriesUser.new(:user_id=>current_user,:country_code=>elm).save #? true : false #если её ещё нет, то сохраняем
+                    CountriesUser.new(:user_id=>current_user.email,:country_code=>elm).save  #если её ещё нет, то сохраняем
+                  else
+                    next # переход к следующей итерации, если елемент уже есть в базе
                 end
             end
             redirect_to Country

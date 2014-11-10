@@ -24,12 +24,18 @@ class CurrenciesController < ApplicationController
   end
 
   def create
-        currencies=params[:country]
-        currencies.each do|i|
-              if !CountriesUser.visited?(current_user, i) # проверка на существование данной записи в базе 
-                CountriesUser.new(:user_id=>current_user,:country_code=>i).save #? puts"== succesfully created===" : puts"== error has occurred==" #если её ещё нет, то сохраняем
-            end
+    currencies=params[:country]
+    if !currencies.nil?
+      currencies.each do |i|
+        if !CountriesUser.visited?(current_user, i) # проверка на существование данной записи в базе
+          CountriesUser.new(:user_id => current_user.email, :country_code => i).save # если нет, то сохраняем
+        else
+          next # иначе пропускаем существующие записи, и переходим к следующей итерации
         end
-        redirect_to Currency
+      end
+      redirect_to Currency
+    else
+      render text: "<html><body><h1  style='color:red;position:center'>Error!</h1></body></html>".html_safe
+    end
   end
 end
