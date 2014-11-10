@@ -26,6 +26,7 @@
       <th>Name <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
       <th>Code</th>
       <th>Status</th>
+      <th>detail</th>
       <th></th>
       <th><input type="checkbox" class="check_all"></th>
     </tr>
@@ -34,6 +35,7 @@
     <tr>
       <td><%= country.name %></td>
       <td><%= country.code %></td>
+      <td><%= CountriesUser.visited?(current_user,country.code) ? 'Visited' : 'Not Visited' %></td>
       <td><%= link_to 'Show', country %></td>
       <td><%= link_to 'Edit', edit_country_path(country) %></td>
       <td><%= check_box_tag "country[]", country.code%></td>

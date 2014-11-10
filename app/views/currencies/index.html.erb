@@ -14,13 +14,15 @@
   <h3>Currencies for <%= current_user.email %></h3>
   <%= form_for @currency_f do |f| %>
   <%=f.submit "Mark all checked as collected"%>
-  <table>
+  <table class="order-table table">
+    <thead>
     <tr>
-      <th>Name</th>
+      <th>Name <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
       <th>Code</th>
       <th>Status</th>
       <th><input type="checkbox" class="check_all"></th>
     </tr>
+    </thead>
 
   <% @currencies.each do |currency| %>
     <tr>
