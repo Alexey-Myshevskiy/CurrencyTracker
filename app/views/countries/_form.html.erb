@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= text_field :country,:name %>
   </div>
   <div class="field">
     <%= f.label :code %><br />
-    <%= f.text_field :code %>
+    <%= text_field :country,:code %>
   </div>
   <div class="field">
     <%= f.label :visited %><br />
-    <%= check_box_tag "country",params[:id],checked=CountriesUser.visited?(current_user, params[:id])%>
+    <%= check_box_tag "country[flag]",params[:id],checked=CountriesUser.visited?(current_user, params[:id])%>
   </div>
   <div class="actions">
     <%= f.submit %>

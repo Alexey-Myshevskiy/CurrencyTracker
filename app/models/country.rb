@@ -1,6 +1,6 @@
 class Country < ActiveRecord::Base
   self.primary_key = :code
-  attr_accessible :name, :code, :visited
+  attr_accessible :name, :code
 
   validates_presence_of :name
   validates_presence_of :code
