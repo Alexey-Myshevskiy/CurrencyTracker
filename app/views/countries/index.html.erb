@@ -2,8 +2,9 @@
 <%  puts "count of visited= #{CountriesUser.count_of_visited_countries(current_user)}"%>
 <% puts "count of not visited= #{CountriesUser.count_of_unvisited_countries(current_user)}" %>
 <% puts "#"*80 %>
+<%= render "layouts/drawgraph"%>
 <section>
-  <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='100px'>
+  <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='330px'>
     <table>
       <tr>
         <th>Visited</th>
@@ -15,6 +16,7 @@
     </table>
   </div>
 </section>
+<div id="chart_div" style="width: 400px; height: 300px;"></div>
   <h3>Countries for <%= current_user.email %></h3>
   <%= form_for @countries_user do |f| %>
     <%=f.hidden_field :user, :value=>current_user.email %>
