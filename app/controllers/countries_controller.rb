@@ -10,6 +10,7 @@ class CountriesController < ApplicationController
       format.xml  { render :xml => @countries }
       @countries_user=CountriesUser.new
     end
+
   end
 
   # GET /countries/1
@@ -26,7 +27,6 @@ class CountriesController < ApplicationController
   # GET /countries/1/edit
   def edit
     @country = Country.find(params[:id])
-    @countries_user=CountriesUser.new
   end
 
   # POST /countries

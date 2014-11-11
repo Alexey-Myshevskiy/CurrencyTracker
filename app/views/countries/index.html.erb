@@ -5,10 +5,11 @@
 <%= render "layouts/drawgraph"%>
 
   <h3>Countries for <%= current_user.email %></h3>
-  <%= form_for @countries_user do |f| %>
+  <%= form_for @countries_user, remote: true do |f| %>
     <%=f.hidden_field :user, :value=>current_user.email %>
     <%=f.submit "Mark all checked as visited"%>
-    
+
+
   <table class="order-table table">
     <thead>
     <tr>
@@ -24,7 +25,7 @@
     <tr>
       <td><%= country.name %></td>
       <td><%= country.code %></td>
-      <td><%= CountriesUser.visited?(current_user,country.code) ? 'Visited' : 'Not Visited' %></td>
+      <td class="<%=country.code%>"><%= CountriesUser.visited?(current_user,country.code) ? 'Visited' : 'Not Visited' %></td>
       <td><%= link_to 'Show', country %></td>
       <td><%= link_to 'Edit', edit_country_path(country) %></td>
       <td><%= check_box_tag "country[]", country.code%></td>

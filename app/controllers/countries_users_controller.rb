@@ -11,7 +11,11 @@ class CountriesUsersController < ApplicationController
                     next # переход к следующей итерации, если елемент уже есть в базе
                 end
             end
-            redirect_to :back
+            respond_to do |format|
+              format.html { redirect_to @countries_user, notice: 'User was successfully created.' }
+              format.js   {}
+              format.json { render json:@countries_user, status: :created, location:@countries_user }
+            end
         else
           render text: "<html><body><h1  style='color:red;position:center'>Error!</h1></body></html>".html_safe
         end
