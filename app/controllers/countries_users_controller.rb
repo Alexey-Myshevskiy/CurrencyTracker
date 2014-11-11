@@ -11,7 +11,7 @@ class CountriesUsersController < ApplicationController
                     next # переход к следующей итерации, если елемент уже есть в базе
                 end
             end
-            redirect_to Country
+            redirect_to :back
         else
           render text: "<html><body><h1  style='color:red;position:center'>Error!</h1></body></html>".html_safe
         end
