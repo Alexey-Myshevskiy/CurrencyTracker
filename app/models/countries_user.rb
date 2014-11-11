@@ -2,7 +2,7 @@ class CountriesUser < ActiveRecord::Base
   attr_accessible :country_code, :user_id
   belongs_to :country, foreign_key: "country_code"
   belongs_to :user
-  @@total_of_countries=0
+  @@total_of_countries
   @@count
 
   def self.count_of_visited_countries(user)

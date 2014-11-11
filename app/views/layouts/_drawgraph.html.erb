@@ -23,9 +23,10 @@
       <tr>
         <th>Visited</th>
         <td><%= CountriesUser.count_of_visited_countries(current_user) %></td>
-      </tr><tr>
-      <th>Not Visited</th>
-      <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
+      </tr>
+      <tr>
+        <th>Not Visited</th>
+        <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
     </tr>
     </table>
   </div>
