@@ -1,33 +1,8 @@
-<!-- подготовка графика к отображению -->
-<% data=[["Year", "Sales"],["2013",  10],["2014",  4],["2015",  0],["2016",  7]] %>
-<script type="text/javascript">
-      google.load("visualization", "1", {packages:["corechart"]});
-      google.setOnLoadCallback(drawChart);
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable(<%=raw data %>);
-
-        var options = {
-          title: 'Company Performance',
-          hAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
-          vAxis: { ticks: [0,5,10,15,] }
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
-    </script>
 <!-- подготовка диаграммы к отображению -->
 <section>
   <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='330px'>
-    <table>
-      <tr>
-        <th>Visited</th>
-        <td><%= CountriesUser.count_of_visited_countries(current_user) %></td>
-      </tr><tr>
-      <th>Not Visited</th>
-      <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
-    </tr>
-    </table>
+    <%= render '/layouts/pie_chart' %>
+
   </div>
 </section>
 <div id="chart_div" style="width: 400px; height: 300px;"></div>

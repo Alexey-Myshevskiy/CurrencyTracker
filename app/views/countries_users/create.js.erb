@@ -1,4 +1,2 @@
-<% params[:country].each do |i|%>
-$(".<%=i%>").html("Visited");
+<%= render "create_#{@target}" %>
 $("input").filter(":checkbox:checked").prop("checked",false);
-<%end%>

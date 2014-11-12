@@ -1,0 +1,8 @@
+new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
+$(".graphics").html('<%= escape_javascript(render "layouts/drawgraph") %>');
+$('.simple_pie_chart').each(function() {
+    SimplePieChart.initialize(this);
+});
+<% @countries.each do |country|%>
+  $("#<%= dom_id(country) %>").replaceWith('<%=j render '/countries/country', :country => country %>');
+<%end%>

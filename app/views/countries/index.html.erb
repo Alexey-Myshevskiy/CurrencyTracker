@@ -1,35 +1,26 @@
-<% puts "#"*80 %>
-<%  puts "count of visited= #{CountriesUser.count_of_visited_countries(current_user)}"%>
-<% puts "count of not visited= #{CountriesUser.count_of_unvisited_countries(current_user)}" %>
-<% puts "#"*80 %>
 <%= render "layouts/drawgraph"%>
-
+<div id='chart_div'>
+  <%= javascript_tag do %>
+      new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
+  <% end %>
+</div>
   <h3>Countries for <%= current_user.email %></h3>
   <%= form_for @countries_user, remote: true do |f| %>
-    <%=f.hidden_field :user, :value=>current_user.email %>
+    <%=f.hidden_field 'target', :value=>'countries'%>
     <%=f.submit "Mark all checked as visited"%>
 
 
-  <table class="order-table table">
-    <thead>
-    <tr>
-      <th>Name <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
-      <th>Code</th>
-      <th>Status</th>
-      <th>detail</th>
-      <th></th>
-      <th><input type="checkbox" class="check_all"></th>
-    </tr>
-    </thead>
-  <% @countries.each do |country| %>
-    <tr>
-      <td><%= country.name %></td>
-      <td><%= country.code %></td>
-      <td class="<%=country.code%>"><%= CountriesUser.visited?(current_user,country.code) ? 'Visited' : 'Not Visited' %></td>
-      <td><%= link_to 'Show', country %></td>
-      <td><%= link_to 'Edit', edit_country_path(country) %></td>
-      <td><%= check_box_tag "country[]", country.code%></td>
-    </tr>
+      <table class="order-table table">
+        <thead>
+        <tr>
+          <th>Name <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
+          <th>Code</th>
+          <th>Status</th>
+          <th>detail</th>
+          <th></th>
+          <th><input type="checkbox" class="check_all"></th>
+        </tr>
+        </thead>
+        <%= render @countries %>
+      </table>
   <% end %>
-        <% end %>
-  </table>
