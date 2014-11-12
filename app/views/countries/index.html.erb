@@ -1,12 +1,12 @@
+<div class="graphics">
 <%= render "layouts/drawgraph"%>
-<div id='chart_div'>
+</div><!-- .div class graphics-->
   <%= javascript_tag do %>
       new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
   <% end %>
-</div>
   <h3>Countries for <%= current_user.email %></h3>
   <%= form_for @countries_user, remote: true do |f| %>
-    <%=f.hidden_field 'target', :value=>'countries'%>
+    <%=f.hidden_field :target ,:value=>'countries'%>
     <%=f.submit "Mark all checked as visited"%>
 
 

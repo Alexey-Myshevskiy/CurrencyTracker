@@ -7,3 +7,4 @@
   <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
 </tr>
 </table>
+ new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')

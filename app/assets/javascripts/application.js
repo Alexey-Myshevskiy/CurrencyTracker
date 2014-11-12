@@ -8,7 +8,6 @@ $(document).ready(function() {
     })
    // (function(document) {
 	'use strict';
-
 	var LightTableFilter = (function(Arr) {
 
 		var _input;

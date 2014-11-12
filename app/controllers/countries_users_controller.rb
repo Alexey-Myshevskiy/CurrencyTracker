@@ -2,9 +2,9 @@ class CountriesUsersController < ApplicationController
 	before_filter :authenticate_user!
     def create
       @countries = Country.find params[:country]
-      @target = params[:target] == 'currencies' ? 'currencies' : 'countries'
+      @target = params[:countries_user][:target] == 'currencies' ? 'currencies' : 'countries'
           user=params[:countries_user][:user]
-
+puts "***********************#{ params[:countries_user][:target]}"
         @countries.each do|elm|
                   if !CountriesUser.visited?(current_user,elm) # проверка на существование данной записи в базе
                     CountriesUser.new(:user_id=>current_user.email,:country_code=>elm).save  #если её ещё нет, то сохраняем

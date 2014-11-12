@@ -6,6 +6,7 @@ var SimplePieChart = {};
 
 SimplePieChart.initialize = function(root_element) { return new ViewController(root_element, {
   initialize: function() {
+
     this.sets = {};
     this.width  = parseInt( this.root.getAttribute('width') );
     this.height = parseInt( this.root.getAttribute('height') );
@@ -39,7 +40,6 @@ SimplePieChart.initialize = function(root_element) { return new ViewController(r
     
     url += "&chd=t:" + this.values().join();
     url += "&chdl=" + this.labels().join('|');
-
     return url;
   },
 

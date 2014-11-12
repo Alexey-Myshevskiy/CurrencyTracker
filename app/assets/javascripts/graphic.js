@@ -7,9 +7,11 @@ function LineChart(data, container) {
     this.container = container;
     google.load("visualization", "1", {packages:["corechart"]});
     google.setOnLoadCallback(jQuery.proxy(this.render, this));
+    alert("!");
 }
 
 LineChart.prototype.render = function() {
+    alert(this.container);
     var options = {
         title: 'Company Performance',
         vAxis: {title: 'Year',  titleTextStyle: {color: '#333'}},
