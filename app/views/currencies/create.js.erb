@@ -1,7 +1,6 @@
 /**
  * Created by alexey on 12.11.14.
  */
-new LineChart(<%= raw current_user.prepare_graphic_data %>, 'chart_div');
 $("#visited_countries_chart").html('<%= escape_javascript(render "/layouts/pie_chart") %>');
 $('.simple_pie_chart').each(function() {
     SimplePieChart.initialize(this);

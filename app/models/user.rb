@@ -12,6 +12,8 @@ class User < ActiveRecord::Base
   has_many :countries, :through=>:countries_users
   @count=0 # хранит общее количество посещённых стран
   @total_amount=0 # хранит количество стран в базе
+ @b=0
+  @b1=0
 
   # получить для пользователя количество стран, где он побывал
   def count_of_visited_countries
@@ -39,10 +41,10 @@ class User < ActiveRecord::Base
     result_array.push(["data","visits"])
     u=CountriesUser.select('created_at').where(:user_id=>id) # получили все даты посещения для пользователя
     if u.size>0
-      b=u.map{|i| i.created_at.to_date} # преобразуем временную метку в дату
-      b1=b.uniq #содержит уникальные даты
-      b1.each do |j|
-        result_array.push( [j.to_s,b.count(j)] ) # сроим массив для инициализации графика
+      @b=u.map{|i| i.created_at.to_date} # преобразуем временную метку в дату
+      @b1=@b.uniq #содержит уникальные даты
+      @b1.each do |j|
+        result_array.push( [j.to_s,@b.count(j)] ) # сроим массив для инициализации графика
       end
       return result_array
     else # если пользователь ещё не посещал ни одну страну
@@ -50,15 +52,19 @@ class User < ActiveRecord::Base
       end
   end
 
-  def self.prepare_range # ---------------- сырой нужно править-------------------------
+  def prepare_range 
     range=Array.new
-    range.push(0)
-    @@b1=@@b.uniq #содержит уникальные даты
-    @@b1.each do |j|
-      range.push(@@b.count(j)) # строим диапазон
-    end
-    range=range.sort!
-    (0..range.last)
+
+    if !@b1.nil?
+      range.push(0) # диапазон должен начинаться с нуля
+      @b1.each do |j|
+        range.push(@b.count(j)) # строим диапазон
+      end
+      range=range.sort!
+      (0..(range.last+3)).to_a
+    else
+      (0..5).to_a
+      end
   end
 
 end
