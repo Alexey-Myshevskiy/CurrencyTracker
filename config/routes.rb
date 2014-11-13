@@ -3,7 +3,7 @@ CurrencyTracker::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "users#index"
+  root to: "currencies#index"
   
   resources :countries, :except => [:new, :destroy]
   resources :countries_users, :only=>[:create]

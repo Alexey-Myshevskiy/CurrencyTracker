@@ -12,4 +12,8 @@ class CountriesUser < ActiveRecord::Base
       self.new(:user_id => user.id, :country_code => country_code).save # пользователь отметил страну, как посещённую
     end
   end
+
+  def self.count_of_visits_by_date(user,date)
+    self.where("user_id=? AND created_at like ?",user.to_s,"%#{date}%").size
+  end
 end
