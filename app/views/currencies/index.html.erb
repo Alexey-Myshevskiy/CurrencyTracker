@@ -1,4 +1,6 @@
-<%= render "layouts/drawgraph"%>
+<div class="graphics">
+  <%= render "layouts/drawgraph"%>
+</div><!-- .div class graphics-->
   <h3>Currencies for <%= current_user.email %></h3>
   <%= form_for @countries_user,remote:true do |f| %>
     <%=f.hidden_field :target, :value=>'currencies'%>
