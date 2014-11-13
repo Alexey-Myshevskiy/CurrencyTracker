@@ -17,6 +17,6 @@ class Currency < ActiveRecord::Base
   end
 
   def collected?(user)
-    country.nil? ? false : CountriesUser.visited?(user,country.code)
+    country.nil? ? false : user.visited_this_country?(country.code)
   end
 end

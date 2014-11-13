@@ -4,10 +4,9 @@ class CountriesUsersController < ApplicationController
       @countries = Country.find params[:country]
       @target = params[:countries_user][:target] == 'currencies' ? 'currencies' : 'countries'
           user=params[:countries_user][:user]
-puts "***********************#{ params[:countries_user][:target]}"
         @countries.each do|elm|
-                  if !CountriesUser.visited?(current_user,elm) # проверка на существование данной записи в базе
-                    CountriesUser.new(:user_id=>current_user.email,:country_code=>elm).save  #если её ещё нет, то сохраняем
+                  if !current_user.visited_this_country?(elm)# проверка на существование данной записи в базе
+                    CountriesUser.new(:user_id=>current_user.id,:country_code=>elm).save  #если её ещё нет, то сохраняем
                   else
                     next # переход к следующей итерации, если елемент уже есть в базе
                 end

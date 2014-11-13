@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :visited %><br />
-    <%= check_box_tag "country[flag]",params[:id],checked=CountriesUser.visited?(current_user, params[:id])%>
+    <%= check_box_tag "country[flag]",params[:id],checked=current_user.visited_this_country?(params[:id])%>
   </div>
   <div class="actions">
     <%= f.submit %>

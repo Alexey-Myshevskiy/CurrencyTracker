@@ -12,7 +12,7 @@
 
 <p>
   <b>Status:</b>
-  <%= CountriesUser.visited?(current_user, params[:id]) ? 'Visited' : 'Not Visited' %>
+  <%= current_user.visited_this_country?(params[:id]) ? 'Visited' : 'Not Visited' %>
 </p>
 
 <p>

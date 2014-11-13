@@ -1,7 +1,7 @@
 <tr id="<%= dom_id(country) %>">
     <td><%= country.name %></td>
     <td><%= country.code %></td>
-    <td class="<%=country.code%>"><%= CountriesUser.visited?(current_user,country.code) ? 'Visited' : 'Not Visited' %></td>
+    <td class="<%=country.code%>"><%= current_user.visited_this_country?(country.code) ? 'Visited' : 'Not Visited' %></td>
     <td><%= link_to 'Show', country %></td>
     <td><%= link_to 'Edit', edit_country_path(country) %></td>
     <td><%= check_box_tag "country[]", country.code%></td>

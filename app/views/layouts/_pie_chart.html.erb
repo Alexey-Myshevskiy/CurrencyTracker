@@ -1,10 +1,9 @@
 <table>
   <tr>
-    <th>V=<%= CountriesUser.count_of_visited_countries(current_user) %></th>
-    <td><%= CountriesUser.count_of_visited_countries(current_user) %></td>
+    <th>V=<%=current_user.count_of_visited_countries%></th>
+    <td><%=current_user.count_of_visited_countries%></td>
   </tr><tr>
-  <th>N/V=<%= CountriesUser.count_of_unvisited_countries(current_user) %></th>
-  <td><%= CountriesUser.count_of_unvisited_countries(current_user) %></td>
+  <th>N/V=<%=current_user.count_of_unvisited_countries%></th>
+  <td><%=current_user.count_of_unvisited_countries%></td>
 </tr>
 </table>
- new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
