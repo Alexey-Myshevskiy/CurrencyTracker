@@ -5,4 +5,3 @@ $('.simple_pie_chart').each(function() {
 <% @countries.each do |country|%>
   $("#<%= dom_id(country) %>").replaceWith('<%=j render '/countries/country', :country => country %>');
 <%end%>
- new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')

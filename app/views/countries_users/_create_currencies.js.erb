@@ -1,6 +1,3 @@
-  <%= javascript_tag do %>
-      new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
-  <% end %>
 $(".graphics").html('<%= escape_javascript(render "layouts/drawgraph") %>');
 $('.simple_pie_chart').each(function() {
     SimplePieChart.initialize(this);

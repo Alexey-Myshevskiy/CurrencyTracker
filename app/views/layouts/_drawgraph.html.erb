@@ -2,7 +2,9 @@
 <section>
   <div id="visited_countries_chart" class="simple_pie_chart" width='300px' height='330px'>
     <%= render '/layouts/pie_chart' %>
-
   </div>
 </section>
 <div id="chart_div" style="width: 400px; height: 300px;"></div>
+<%= javascript_tag do %>
+    new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
+<% end %>

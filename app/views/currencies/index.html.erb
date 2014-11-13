@@ -1,7 +1,4 @@
 <%= render "layouts/drawgraph"%>
-<%= javascript_tag do %>
-    new LineChart(<%= raw CountriesUser.prepare_graphic_data(current_user) %>, 'chart_div')
-<% end %>
   <h3>Currencies for <%= current_user.email %></h3>
   <%= form_for @countries_user,remote:true do |f| %>
     <%=f.hidden_field :target, :value=>'currencies'%>
