@@ -52,10 +52,10 @@ class User < ActiveRecord::Base
       end
   end
 
-  def prepare_range 
+  def prepare_range
     range=Array.new
 
-    if !@b1.nil?
+    if (!@b1.nil? && @b1.size>10)
       range.push(0) # диапазон должен начинаться с нуля
       @b1.each do |j|
         range.push(@b.count(j)) # строим диапазон

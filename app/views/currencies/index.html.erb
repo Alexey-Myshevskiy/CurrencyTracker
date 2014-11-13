@@ -11,17 +11,10 @@
       <th>Name <input type="search" class="light-table-filter" data-table="order-table" placeholder="Filter"></th>
       <th>Code</th>
       <th>Status</th>
+      <th>details</th>
       <th><input type="checkbox" class="check_all"></th>
     </tr>
     </thead>
-
-  <% @currencies.each do |currency| %>
-    <tr>
-      <td><%= currency.name %></td>
-      <td><%= currency.code %></td>
-      <td><%= link_to 'Show', currency %></td>
-      <td><%= check_box_tag "country[]", currency.country_id%></td>
-    </tr>
-  <% end %>
+    <%= render @currencies %>
   <%end%>
   </table>

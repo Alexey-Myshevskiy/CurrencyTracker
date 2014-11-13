@@ -1,0 +1,7 @@
+<tr id="<%= dom_id(currency) %>">
+  <td><%= currency.name %></td>
+  <td><%= currency.code %></td>
+  <td class="<%=currency.code%>"><%= currency.collected?(current_user) ? 'Collected' : 'Not collected' %></td>
+  <td><%= link_to 'Show', currency %></td>
+  <td><%= check_box_tag "country[]", currency.country_id%></td>
+</tr>

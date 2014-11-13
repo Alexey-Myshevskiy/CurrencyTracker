@@ -2,6 +2,7 @@ class CountriesUsersController < ApplicationController
 	before_filter :authenticate_user!
     def create
       @countries = Country.find params[:country]
+      @currencies= Currency.where(country_id:params[:country])
       @target = params[:countries_user][:target] == 'currencies' ? 'currencies' : 'countries'
           user=params[:countries_user][:user]
         @countries.each do|elm|
@@ -12,7 +13,6 @@ class CountriesUsersController < ApplicationController
                 end
             end
             respond_to do |format|
-            #  format.html { redirect_to @countries_user, notice: 'User was successfully created.' }
               format.js   {}
             end
     end

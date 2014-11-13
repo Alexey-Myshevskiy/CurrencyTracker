@@ -12,15 +12,4 @@ class CountriesUser < ActiveRecord::Base
       self.new(:user_id => user.id, :country_code => country_code).save # пользователь отметил страну, как посещённую
     end
   end
-
-  # def self.prepare_range # ---------------- сырой нужно править-------------------------
-  #   range=Array.new
-  #   range.push(0)
-  #   @@b1=@@b.uniq #содержит уникальные даты
-  #   @@b1.each do |j|
-  #     range.push(@@b.count(j)) # строим диапазон
-  #   end
-  #   range=range.sort!
-  #   (0..range.last)
-  #   end
 end

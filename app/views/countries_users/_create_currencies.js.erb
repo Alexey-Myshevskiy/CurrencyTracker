@@ -2,3 +2,6 @@ $(".graphics").html('<%= escape_javascript(render "layouts/drawgraph") %>');
 $('.simple_pie_chart').each(function() {
     SimplePieChart.initialize(this);
 });
+<% @currencies.each do |currency|%>
+$("#<%= dom_id(currency) %>").replaceWith('<%=j render '/currencies/currency', :currency =>currency %>');
+<%end%>
