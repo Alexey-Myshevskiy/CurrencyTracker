@@ -9,10 +9,27 @@ function LineChart(data,range,container) {
     google.load("visualization", "1", {packages:["corechart"]});
     $(document).ready(function() {
         var options = {
-            title: 'Company Performance',
-            vAxis: {title: 'total visits',titleTextStyle: {color: '#333'},ticks:range},
-            hAxis: { title: "date"}
+            hAxis: {
+                title: 'dates of visits',
+                titleTextStyle: {
+                    color: '#333'
+                },
+                gridlines: {
+                    color: '#f3f3f3',
+                }
+            },
+            vAxis: {
+                title: 'sum of visits per date',
+                minValue: 1,
+                maxValue:7,
+                gridlines: {
+                    color: '#f3f3f3',
+                    count: 7
+                },
+                format: '#'
+            }
         };
+
         var chart = new google.visualization.AreaChart(document.getElementById(container));
         chart.draw(google.visualization.arrayToDataTable(data), options);
     });

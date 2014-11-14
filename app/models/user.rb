@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
     range=[0]
     # report_data=Hash.new
     result_array=Array.new
-    result_array.push(["data", "visits"])
+    result_array.push(["data", "visits"],["",0])
     counter_of_dates=CountriesUser.uniques_date_size(id)
 
     if counter_of_dates.size>0&&counter_of_dates.size<8
