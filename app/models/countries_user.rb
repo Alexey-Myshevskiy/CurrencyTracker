@@ -19,8 +19,8 @@ class CountriesUser < ActiveRecord::Base
 
   def self.uniques_date_size(user)
     u=self.select('created_at').where(:user_id => user) # получили все даты посещения для пользователя
-    @b=u.map { |i| i.created_at.to_date } # преобразуем временную метку в дату
-    @b1=@b.uniq #содержит уникальные даты
+    b=u.map { |i| i.created_at.to_date } # преобразуем временную метку в дату
+    b1=b.uniq #содержит уникальные даты
   end
 
 end

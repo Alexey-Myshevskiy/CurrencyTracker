@@ -34,12 +34,11 @@ class CurrenciesController < ApplicationController
         end
       end
       respond_to do |format|
-        #  format.html { redirect_to @countries_user, notice: 'User was successfully created.' }
         format.js   {}
         format.json { render json:@currency_f, status: :created, location:@currency_f }
       end
     else
-      render text: "<html><body><h1  style='color:red;position:center'>Error!</h1></body></html>".html_safe
+      # Show ERROR massage
     end
   end
 end

@@ -6,6 +6,11 @@
 </section>
 <!--- подготовка графика -->
 <div id="chart_div" style="width: 400px; height: 300px;"></div>
+<%
+   report_data=current_user.prepare_graphic_dates
+   init_x=report_data["initialize_x"]
+   init_y=report_data["initialize_y"]
+%>
 <%= javascript_tag do %>
-    new LineChart(<%= raw current_user.prepare_graphic_dates%>,'chart_div')
+    new LineChart(<%= raw init_x%>,<%=init_y%>,'chart_div')
 <% end %>
