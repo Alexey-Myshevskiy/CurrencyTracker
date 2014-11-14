@@ -39,29 +39,31 @@ class User < ActiveRecord::Base
   def prepare_graphic_dates
     result_array=Array.new
     result_array.push(["data", "visits"])
-    u=CountriesUser.select('created_at').where(:user_id => id) # получили все даты посещения для пользователя
-    # просто строим массив
-    @b=u.map { |i| i.created_at.to_date } # преобразуем временную метку в дату
-    @b1=@b.uniq #содержит уникальные даты
+    # u=CountriesUser.select('created_at').where(:user_id => id) # получили все даты посещения для пользователя
+    # # просто строим массив
+    # @b=u.map { |i| i.created_at.to_date } # преобразуем временную метку в дату
+    @b1=CountriesUser.uniques_date_size(id)
 
-    if u.size>0
-      if u.size<=7
-        @b1.each do |j|
-          result_array.push([j.to_s,CountriesUser.count_of_visits_by_date(id,j)]) # сроим массив для инициализации графика
-          end
-      else
-        array=@b1.grep @b1.size-7..@b1.size # усечение масива
-        array.each do |j|
-          result_array.push([j.to_s,CountriesUser.count_of_visits_by_date(id,j)]) # сроим массив для инициализации графика
-        end
+    if @b1.size>0&&@b1.size<8
+      puts "============================ >0:<8"
+      count=0
+      @b1.each do |j|
+        count==0 ? count=CountriesUser.count_of_visits_by_date(id, j) : count+=CountriesUser.count_of_visits_by_date(id, j)
+        result_array.push([j.to_s, count])
+      end
+    elsif @b1.size>8
+      puts "============================ >8"
+      arr=@b1.grep @b1.size-7..@b1.size
+      arr.each do |j|
+        count==0 ? count=CountriesUser.count_of_visits_by_date(id, j) : count+=CountriesUser.count_of_visits_by_date(id, j)
+        result_array.push([j.to_s, count])
       end
     else # если пользователь ещё не посещал ни одну страну
+      puts "============================ 0"
       result_array.push([Date.today.to_s, 0]) # сроим массив для инициализации графика
     end
-    puts "==========================================#{result_array[2]}"
     return result_array
   end
-
   # def prepare_sums_visits
   #   range=Array.new
   # 

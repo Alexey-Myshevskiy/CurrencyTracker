@@ -13,7 +13,14 @@ class CountriesUser < ActiveRecord::Base
     end
   end
 
-  def self.count_of_visits_by_date(user,date)
-    self.where("user_id=? AND created_at like ?",user.to_s,"%#{date}%").size
+  def self.count_of_visits_by_date(user,data)
+     self.where("user_id=? AND created_at like ?",user.to_s,"%#{data}%").size
   end
+
+  def self.uniques_date_size(user)
+    u=self.select('created_at').where(:user_id => user) # получили все даты посещения для пользователя
+    @b=u.map { |i| i.created_at.to_date } # преобразуем временную метку в дату
+    @b1=@b.uniq #содержит уникальные даты
+  end
+
 end
