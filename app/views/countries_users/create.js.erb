@@ -1,2 +1,3 @@
 <%= render "create_#{@target}" %>
 $("input").filter(":checkbox:checked").prop("checked",false);
+$(".order-table").trigger("updateAll",[true]);

@@ -32,7 +32,7 @@ class CountriesController < ApplicationController
   # POST /countries.xml
   def create
     @country = Country.new(params[:country])
-
+    if !@country.nil?
     respond_to do |format|
       if @country.save
         format.html { redirect_to(@country, :notice => 'Country was successfully created.') }
@@ -42,6 +42,9 @@ class CountriesController < ApplicationController
         format.xml  { render :xml => @country.errors, :status => :unprocessable_entity }
       end
     end
+    else
+      # show message error!
+      end
   end
 
   # PUT /countries/1

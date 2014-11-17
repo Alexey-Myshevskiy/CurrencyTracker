@@ -1,7 +1,8 @@
 class CountriesUsersController < ApplicationController
 	before_filter :authenticate_user!
     def create
-      @countries = Country.find params[:country]
+      if !params[:country].nil?
+        @countries = Country.find params[:country]
       @currencies= Currency.where(country_id:params[:country])
       @target = params[:countries_user][:target] == 'currencies' ? 'currencies' : 'countries'
           user=params[:countries_user][:user]
@@ -15,5 +16,8 @@ class CountriesUsersController < ApplicationController
             respond_to do |format|
               format.js   {}
             end
+      else
+        render nothing: true
+    end
     end
 end
